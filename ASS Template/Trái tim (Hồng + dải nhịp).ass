@@ -1,0 +1,26 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:02.85,0:00:02.85,Default,,0000,0000,0000,code syl all,function char_counter(ref) ci[ref] = ci[ref] + 1; return "" end
+Comment: 0,0:00:02.85,0:00:02.85,Default,,0000,0000,0000,code line all,ci = {0,0,0,0,0,0}; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 1,0:00:02.85,0:00:02.85,Default,lead-in(text),0000,0000,0000,template noblank char,!char_counter(1)!!retime("start2syl",-1500+(ci[1]-1)*25,0)!{\fscx100\fscy100\frz\an5\3c&H8601E4&\bord2\blur4\move(!$scenter+math.random(10,150)!,!$smiddle+math.random(-10,50)!,$scenter,$smiddle,0,500)\t(0,!math.random(100,1000)!,\fscx100\fscy100)\bord2\blur4)\fad(350,0)}
+Comment: 1,0:00:00.08,0:00:05.08,Default,,0000,0000,0000,template noblank,!retime("syl",-50,-50)!{\an5\3c&HFFFFFF&\c&H8917FF&\fscx280\fscy280\bord2\blur5\move(!$left-((syl.i == 1) and "50" or "0")!,$middle,!$right+((syl.i == $syln) and "50" or "0")!,$middle)\t(0,100,\bord2\blur17\fscx380\fscy380)\t(0,100,\bord2\blur5\fscx280\fscy280)\p1}m 16 30 b 27 24 30 18 30 14 b 31 8 23 0 16 8 b 10 0 1 8 3 14 b 4 18 6 24 16 30 m 21 6 b 22 6 22 8 21 8 b 20 8 20 6 21 6 m 25 7 b 32 11 28 19 24 23 b 22 25 21 23 23 22 b 27 19 30 10 24 8
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank,!retime("syl",0,600)!{\an5\move($scenter,$smiddle,!$scenter-100!,!$smiddle-3!,0,3000)\t(0,25,\fscx135\fscy135)\blur5\bord5\3c&HFFFCEB&\1a&HEF&\4a&HEF&\t(20,$dur,\fscx110\fscy110)\fad(0,400)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter2(ref) ci2[ref] = ci2[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci2 = { 0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 0,0:00:00.00,0:00:14.36,Default,,0000,0000,0000,template noblank notext,!char_counter2(1)!!retime("line",-300+(ci2[1]-1)*700,300+(ci2[1]-1)*50)!{\clip(!$lleft-20!,!$middle-50!,!$lright+20!,!$middle+50!)\an5\move(!$lcenter-700!,$lmiddle,!$lcenter+1000!,$lmiddle,0,6000)\fad(0,300)\bord0.2\blur3\3c&H9113EB&\c&HFFFFFF&\fscx50\fscy50\p1}m 0 0 m -1 31 l 0 31 l 3 30 l 5 32 l 6 31 l 8 24 l 10 45 l 11 33 l 14 32 l 18 32 l 22 30 l 25 32 l 33 31 l 43 30 l 46 26 l 49 30 l 51 31 l 53 3 l 55 33 l 58 33 l 63 36 l 68 28 l 74 29 l 83 30 l 88 29 l 90 28 l 93 30 l 96 30 l 98 0 l 101 32 l 105 29 l 122 29 l 122 30 l 105 30 l 101 33 l 98 8 l 97 31 l 93 31 l 90 29 l 83 31 l 73 30 l 68 29 l 63 37 l 58 34 l 54 34 l 53 13 l 52 32 l 49 31 l 46 27 l 43 31 l 33 32 l 25 33 l 22 31 l 18 33 l 14 33 l 11 34 l 10 48 l 8 28 l 7 32 l 5 33 l 3 31 l 0 32 l -4 30 l -33 30 l -33 29 l -4 29 m 122 29 l 126 20 l 133 44 l 138 23 l 144 36 l 149 31 l 151 27 l 153 29 l 157 31 l 161 29 l 175 8 l 181 31 l 187 47 l 195 40 l 198 32 l 199 23 l 209 26 l 221 17 l 222 23 l 236 22 l 244 27 l 247 24 l 250 24 l 261 1 l 263 41 l 270 27 l 271 34 l 275 1 l 280 29 l 286 12 l 289 31 l 294 12 l 307 29 l 329 29 l 339 7 l 339 39 l 341 29 l 377 29 l 377 30 l 342 30 l 339 43 l 338 11 l 329 30 l 306 30 l 294 14 l 289 34 l 286 15 l 280 32 l 275 7 l 271 36 l 270 29 l 263 43 l 260 4 l 251 25 l 247 25 l 244 28 l 236 23 l 221 24 l 220 19 l 209 27 l 200 24 l 199 32 l 196 41 l 187 49 l 180 31 l 175 10 l 162 30 l 157 32 l 153 30 l 151 29 l 150 32 l 144 37 l 138 25 l 133 46 l 126 22 l 123 30 l 122 30 "
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0000,0000,0000,,

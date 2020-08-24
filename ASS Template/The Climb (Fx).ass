@@ -1,0 +1,28 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:02.85,0:00:02.85,Default,,0000,0000,0000,code syl all,function char_counter(ref) ci[ref] = ci[ref] + 1; return "" end
+Comment: 0,0:00:02.85,0:00:02.85,Default,,0000,0000,0000,code line all,ci = {0,0,0,0,0,0}; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter2(ref) ci2[ref] = ci2[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci2 = { 0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 1,0:00:02.85,0:00:02.85,Default,,0000,0000,0000,template char noblank,!retime("syl",0,200)!{\an5\move($scenter,$smiddle,$scenter,!$smiddle-40!)\t(0,100,\3c&HFFFFFF&\bord7\blur3)\t(11,$dur,\bord3\blur0)\t(0,$dur,\frz!math.random(0,0)!)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once all,shape="m 30 0 b 13 0 0 13 0 30 b 0 47 13 60 30 60 b 47 60 60 47 60 30 b 60 13 47 0 30 0 l 30 9 b 34 9 37 7 38 3 b 51 7 58 18 58 30 b 58 41 51 50 46 52 b 46 47 36 45 30 45 b 24 45 14 47 14 52 b 9 50 3 41 2 30 b 2 18 10 7 22 3 b 22 7 26 9 30 9 "
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once all,function move_box(left,top,right,bottom) x1=math.random(left-20,right+20) x2=x1+math.random(-40,40) y1=bottom+math.random(-10,10) y2=top+math.random(-10,10) return string.format("\\move(%d,%d,%d,%d)",x1,y1,x2,y2) end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once all,function random_size(lower,upper) if (lower>upper) then temp=lower lower=upper upper=temp end size=math.random(lower,upper) return string.format("\\fscx%d\\fscy%d",size,size) end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,phi=3.141592*math.random() function reset_phi() phi=3.141592*math.random() return "" end
+Comment: 2,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template char noblank notext,!maxloop(2)!!retime("syl",0,400)!{!random_size(10,100)!!move_box($left,$top,$right,$bottom)!\blur1\fad(100,100)\c&HFFD473&\p3}!shape!
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template char,{\an5}!char_counter2(1)!!retime("start2syl",-900+(ci2[1]-1)*35,0)!{\frz100\bord3\1a&HFF&\3a&HFF&\move(!$center+40!,!$middle+15!,$scenter,$smiddle,0,500)\t(0,500,\fscx100\fscy100\frz0\alpha&H00)}

@@ -1,0 +1,23 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter2(ref) ci2[ref] = ci2[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci2 = { 0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template char,{\an5}!char_counter2(1)!!retime("start2syl",-900+(ci2[1]-1)*35,0)!{\frz100\bord2.5\blur2\1a&HFF&\3a&HFF&\move(!$center+40!,!$middle+15!,$scenter,$smiddle,0,500)\t(0,500,\fscx100\fscy100\frz0\alpha&H00)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank,!retime("syl",0,1000)!{\an5\c&HFFFFFF&\bord2\blur4\shad0\fscx100\fscy100\t(0,200,\fscx135\fscy135)\t(200,400,\fscx100\fscy100)\t(0,3000,\alpha&HFF&)\fad(0,100)\t(0,100,\3c&HFFFFFF&\t(100,$dur,\3c!line.styleref.color3!\move($scenter,$smiddle,$scenter,!$smiddle-30!)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank notext loop 7,!retime("syl",-1000+(j-1)*500,500)!{\an5\c&HFFFFFF&\fscx24\fscy24\bord0\shad0\move(!$scenter+math.random(0,35)!,!$smiddle+math.random(-100,-50)!,!$scenter+math.random(-35,0)!,!$middle+5!,0,1000)\t(900,1200,\fscx0\fscy0\bord10\3c&HFFFFFF&\blur11\t(0,2000,\alpha&HFF&)\p1}m 0 16 l 38 16 l 38 19 l 0 19 m 8 2 l 10 0 l 19 15 l 30 33 l 28 35 m 28 0 l 30 2 l 10 35 l 8 33 l 11 28 m 5 16 l 2 11 l 3 9 l 8 16 m 12 9 l 3 9 l 4 7 l 12 7 m 13 5 l 16 0 l 19 0 l 14 7 m 24 7 l 19 0 l 22 0 l 25 5 m 27 7 l 34 7 l 35 9 l 25 9 m 30 16 l 35 9 l 36 11 l 33 16 m 33 19 l 36 24 l 35 26 l 30 19 m 25 26 l 35 26 l 34 28 l 27 28 m 25 30 l 22 35 l 19 35 l 24 28 m 14 28 l 19 35 l 16 35 l 13 30 m 11 28 l 4 28 l 3 26 l 13 26 m 8 19 l 3 26 l 2 24 l 5 19
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank,!retime("syl",-200,500)!{\galovejiro\fscx62\fscy62\c&HFFFFFF&\3c&HFFFFFF&\fad(10,100)\bord2\blur3\an5\frz!math.random(-50,50)!\move(!$scenter+math.random(-20,20)!,!$smiddle+math.random(-50,-30)!,!$scenter+math.random(-70,70)!,!$smiddle+math.random(30,50)!)\t(0,3000,\frz!math.random(-200,200)!)\t(0,100,\bord0.5\blur4\3c&HFFFFFF&)\p1}m 0 16 l 38 16 l 38 19 l 0 19 m 8 2 l 10 0 l 19 15 l 30 33 l 28 35 m 28 0 l 30 2 l 10 35 l 8 33 l 11 28 m 5 16 l 2 11 l 3 9 l 8 16 m 12 9 l 3 9 l 4 7 l 12 7 m 13 5 l 16 0 l 19 0 l 14 7 m 24 7 l 19 0 l 22 0 l 25 5 m 27 7 l 34 7 l 35 9 l 25 9 m 30 16 l 35 9 l 36 11 l 33 16 m 33 19 l 36 24 l 35 26 l 30 19 m 25 26 l 35 26 l 34 28 l 27 28 m 25 30 l 22 35 l 19 35 l 24 28 m 14 28 l 19 35 l 16 35 l 13 30 m 11 28 l 4 28 l 3 26 l 13 26 m 8 19 l 3 26 l 2 24 l 5 19

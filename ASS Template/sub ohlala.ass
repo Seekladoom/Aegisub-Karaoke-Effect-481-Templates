@@ -1,0 +1,63 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Audio File: ?video
+Video File: Clip\[ Clip ] Oh la la.FLV
+Video Aspect Ratio: 0
+Video Zoom: 8
+Video Position: 6428
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:10.97,0:00:15.42,Default,,0000,0000,0000,,{\k40\pos(299,469)}pom {\k28}na{\k61}-geman {\k26}sa{\k13}ra{\k63}seo {\k26}cheo{\k32}-reop{\k31}-seot{\k38}-deon {\k20}nae{\k67}-ga
+Dialogue: 0,0:00:16.09,0:00:20.52,Default,,0000,0000,0000,,{\k31}han{\k30}sun{\k68}-gane {\k27}shil{\k74}-suro {\k33}dang{\k28}-hal {\k36}jul {\k20}mo{\k30}lla{\k66}sseo
+Dialogue: 0,0:00:21.23,0:00:25.65,Default,,0000,0000,0000,,{\k67}u{\k30}-lla{\k37}lla {\k22}u{\k26}-lla{\k74}lla {\k30}chak{\k31}-ka{\k36}-kha{\k25}ji {\k64}ma
+Dialogue: 0,0:00:26.25,0:00:31.02,Default,,0000,0000,0000,,{\k66}u{\k38}-lla{\k34}lla {\k34}u{\k34}-lla{\k46}lla {\k28}eo{\k52}jjeo{\k34}myeon {\k27}jo{\k84}wa
+Dialogue: 0,0:00:31.30,0:00:35.85,Default,,0000,0000,0000,,{\k50}kot{\k26}-dae {\k51}nop{\k18}ko {\k17}yep{\k29}peun {\k66}cheok{\k38} chakhan{\k29}-cheok{\k31}ha{\k34}deo{\k66}ni
+Dialogue: 0,0:00:36.45,0:00:41.59,Default,,0000,0000,0000,,{\k36}kap{\k40}-ja{\k32}gi {\k34}neo {\k46}ireoh{\k44}ke {\k36}byeo{\k26}nhal {\k38}jul {\k20}mol{\k21}las{\k141}seo
+Dialogue: 0,0:00:41.67,0:00:46.09,Default,,0000,0000,0000,,{\k59}u{\k36}-lla{\k35}lla {\k26}u{\k26}-lla{\k76}lla {\k15}tae{\k42}che {\k23}waeh {\k50}i{\k54}rae
+Dialogue: 0,0:00:46.71,0:00:52.05,Default,,0000,0000,0000,,{\k60}u{\k43}-lla{\k32}lla {\k28}u{\k35}-lla{\k66}lla {\k33}eoj{\k29}jeo{\k34}myeon {\k30}jo{\k144}wa
+Dialogue: 0,0:00:53.07,0:00:57.60,Default,,0000,0000,0000,,{\k41}eot{\k21}teo{\k64}-khae {\k13}na {\k27}eot{\k25}teo{\k44}-khae {\k33}na {\k27}eot{\k31}teo{\k21}kha{\k18}ra{\k88}-go
+Dialogue: 0,0:00:58.11,0:01:00.51,Default,,0000,0000,0000,,{\k38}mi{\k36}dji {\k56}mo{\k10}thal {\k31}i{\k27} ya{\k42}egireul
+Dialogue: 0,0:01:00.64,0:01:03.23,Default,,0000,0000,0000,,{\k20}eot{\k18}teo{\k29}khar{\k13}an {\k27}ma{\k30}ri{\k114}ya
+Dialogue: 0,0:01:03.34,0:01:08.31,Default,,0000,0000,0000,,{\k32}a{\k38}ni{\k54}ya neo {\k39}a{\k35}ni{\k31}ya {\k33}na {\k28}mi{\k27}deul {\k25}su {\k32}eop{\k123}-seo
+Dialogue: 0,0:01:08.40,0:01:10.67,Default,,0000,0000,0000,,{\k37}i{\k26}je{\k43}seo{\k31}ya {\k31}al{\k28}-ke {\k31}dwaeht-ji
+Dialogue: 0,0:01:10.67,0:01:13.02,Default,,0000,0000,0000,,{\k20}j{\k16}in{\k12}j{\k31}ja {\k23}neoyi {\k18}mo{\k36}seu{\k105}beul
+Dialogue: 0,0:01:13.58,0:01:18.55,Default,,0000,0000,0000,,{\k34}lal{\k14}la{\k16}la{\k25}ral{\k35}lal{\k101}lai {\k59}lal{\k26}la{\k12}ra{\k31}ral{\k21}lal{\k123}lai
+Dialogue: 0,0:01:18.66,0:01:23.42,Default,,0000,0000,0000,,{\k32}lal{\k23}la{\k15}ra{\k25}ral{\k39}lal{\k126}lai {\k22}ra{\k29}ra{\k27}ra{\k25}ra{\k25}ra{\k35}ral{\k53}lai
+Dialogue: 0,0:01:28.73,0:01:33.30,Default,,0000,0000,0000,,{\k54}wah{\k22}nbyeo{\k57}kha{\k16}-ge {\k16}mo{\k28}deun {\k70}geol {\k14}kaj{\k21}yeos{\k38}seot{\k34}-deon {\k20}nae{\k67}-ga
+Dialogue: 0,0:01:34.22,0:01:38.97,Default,,0000,0000,0000,,{\k47}jukdo{\k44}rong {\k20}neo {\k15}ttae{\k30}-mu{\k48}ne {\k32}him{\k24}deul {\k31}jul {\k26}mol{\k29}las{\k125}seo
+Dialogue: 0,0:01:39.08,0:01:44.18,Default,,0000,0000,0000,,{\k58}u{\k42}-lla{\k33}lla {\k26}u{\k34}-lla{\k65}lla {\k30}nae{\k30}-ga{\k40}wae{\k30}hi{\k122}rae
+Dialogue: 0,0:01:44.22,0:01:49.32,Default,,0000,0000,0000,,{\k41}u{\k52}-lla{\k38}lla {\k27}u{\k36}-lla{\k60}lla {\k35}eoj{\k29}jeo{\k36}myeon {\k30}jo{\k126}wa
+Dialogue: 0,0:01:49.37,0:01:54.27,Default,,0000,0000,0000,,{\k25}wae{\k37}hi{\k50}rae {\k13}neo {\k33}wae{\k27}hi{\k56}rae {\k15}na {\k19}al {\k39}su{\k22}ga {\k15}eop{\k139}-seo
+Dialogue: 0,0:01:54.30,0:01:56.93,Default,,0000,0000,0000,,{\k37}waeh {\k36}jak{\k37}ku{\k31}man {\k66}byeonhae{\k56}-gani
+Dialogue: 0,0:01:56.97,0:01:58.92,Default,,0000,0000,0000,,{\k23}keo{\k14}bi {\k16}na{\k13}-ge {\k26}ma{\k26}ri{\k77}ya
+Dialogue: 0,0:01:59.46,0:02:04.54,Default,,0000,0000,0000,,{\k34}him{\k34}deu{\k56}-reo {\k16}na {\k28}him{\k32}deu{\k38}-reo {\k22}na {\k30}beo{\k27}til {\k14}su {\k34}eop{\k143}-seo
+Dialogue: 0,0:02:04.58,0:02:07.11,Default,,0000,0000,0000,,{\k28}do{\k35}dae{\k42}che{\k28}-ga {\k23}i {\k37}sang{\k60}-hwahngi
+Dialogue: 0,0:02:07.17,0:02:09.15,Default,,0000,0000,0000,,{\k20}jeol{\k17}-tae {\k17}i{\k17}hae{\k15}-ga {\k34}an {\k78}dwaeh
+Dialogue: 0,0:02:09.72,0:02:14.82,Default,,0000,0000,0000,,{\k25}lal{\k27}la{\k15}la{\k31}ral{\k32}lal{\k129}lai {\k35}lal{\k19}la{\k15}ra{\k28}ral{\k30}lal{\k124}lai
+Dialogue: 0,0:02:14.85,0:02:19.92,Default,,0000,0000,0000,,{\k32}lal{\k23}la{\k13}ra{\k30}ral{\k31}lal{\k127}lai {\k34}lal{\k22}la{\k17}ra{\k23}ra{\k23}ral{\k39}lal{\k93}lai
+Dialogue: 0,0:02:20.25,0:02:25.54,Default,,0000,0000,0000,,{\k20}sa{\k30}rang {\k28}ttae{\k24}-mu{\k78}ne {\k51}neo{\k40}mu {\k36}ji{\k17}chi{\k29}go {\k48}him{\k35}deu{\k40}-reos{\k53}seo
+Dialogue: 0,0:02:25.71,0:02:28.37,Default,,0000,0000,0000,,{\k24}su{\k41}-llo {\k36}gin {\k30}bam {\k48}ji{\k53}seu{\k34}-go
+Dialogue: 0,0:02:28.45,0:02:33.96,Default,,0000,0000,0000,,{\k43}nun{\k19}-mu{\k29}-reul {\k28}sam{\k31}kyeo{\k39}ya{\k362}hae
+Dialogue: 0,0:02:41.59,0:02:46.39,Default,,0000,0000,0000,,{\k39}eot{\k33}teo{\k51}-khae {\k15}na {\k29}eot{\k27}teo{\k38}-khae {\k36}na {\k29}eot{\k27}teo{\k23}kha{\k23}ra{\k110}-go
+Dialogue: 0,0:02:46.65,0:02:48.98,Default,,0000,0000,0000,,{\k28}mi{\k36}dji {\k64}mo{\k16}thal {\k31}i {\k30}ya{\k28}egireul
+Dialogue: 0,0:02:49.28,0:02:51.79,Default,,0000,0000,0000,,{\k26}eot{\k12}teo{\k23}khar{\k13}an {\k22}ma{\k27}ri{\k128}ya
+Dialogue: 0,0:02:51.85,0:02:56.37,Default,,0000,0000,0000,,{\k24}a{\k28}ni{\k48}ya {\k26}neo {\k38}a{\k32}ni{\k34}ya {\k32}na {\k32}mi{\k20}deul {\k28}su {\k16}eop{\k92}-seo
+Dialogue: 0,0:02:56.95,0:02:59.18,Default,,0000,0000,0000,,{\k36}i{\k34}je{\k32}seo{\k30}ya {\k35}al{\k25}-ke {\k31}dwaeht-ji
+Dialogue: 0,0:02:59.22,0:03:01.43,Default,,0000,0000,0000,,{\k52}jin{\k32}jja {\k15}neoyi {\k14}mo{\k35}seu{\k73}beul
+Dialogue: 0,0:03:02.03,0:03:07.17,Default,,0000,0000,0000,,{\k29}lal{\k26}la{\k16}la{\k30}ral{\k36}lal{\k125}lai {\k36}lal{\k16}la{\k14}ra{\k32}ral{\k30}lal{\k124}lai
+Dialogue: 0,0:03:07.24,0:03:11.67,Default,,0000,0000,0000,,{\k32}lal{\k16}la{\k16}ra{\k30}ral{\k29}lal{\k119}lai {\k20}lal{\k17}la{\k25}ra{\k13}ra{\k18}ral{\k28}lal{\k80}lai
+Dialogue: 0,0:03:12.25,0:03:17.31,Default,,0000,0000,0000,,{\k37}lal{\k23}la{\k10}la{\k32}ral{\k30}lal{\k123}lai {\k26}lal{\k32}la{\k12}ra{\k32}ral{\k32}lal{\k117}lai
+Dialogue: 0,0:03:17.37,0:03:21.90,Default,,0000,0000,0000,,{\k39}lal{\k16}la{\k16}ra{\k29}ral{\k35}lal{\k126}lai {\k16}lal{\k16}la{\k18}ra{\k14}ra{\k23}ral{\k31}lal{\k74}lai
+Dialogue: 0,0:03:21.90,0:03:23.90,Default,,0000,0000,0000,,{\k70}Thanks {\k40}for {\k468}watch...!
+Dialogue: 0,0:03:23.90,0:03:27.87,Default,,0000,0000,0000,,Banhmy.sua ^^!
+Dialogue: 0,0:03:27.87,0:03:29.87,Default,,0000,0000,0000,,
