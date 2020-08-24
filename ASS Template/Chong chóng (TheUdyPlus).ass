@@ -1,0 +1,27 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter(ref) ci[ref] = ci[ref] + 1; return "" end ;
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci = { 0,0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank char,!char_counter(1)!!retime("start2syl",-1400+(ci[1]-1)*35,0)!{\fad(500,0)\an5\moves4(!$scenter+200*(-1)^(syl.i+1)!,!$smiddle+120!,!$scenter+200*(-1)^(syl.i+1)!,!$smiddle-120!,!$scenter!,$smiddle,$scenter,$smiddle,0,1000)\bord1.5\blur5\3c&H535202&\c&HFFFFFF&)}
+Comment: 0,0:00:56.88,0:00:57.34,Default,,0000,0000,0000,template char noblank loop 3,!retime("syl",0,600-(j-0)*150)!{\fad(0,600)\an5\bord0\blur4\c&HFFFFFF&\3c&HFFFFFF&\move($center,$middle,!$scenter+math.random(-90,-60)!,!$smiddle+math.random(-90,-60)!,0,1700)}
+Comment: 0,0:00:56.88,0:00:57.34,Default,,0000,0000,0000,template noblank notext,!retime("syl",0,500)!{\frx360\an5\frz0\fscx0\fscy0\shad0\bord2\c&HA0A000&\3c&HFFFFFF&\blur2\fad(50,300)\pos(!$scenter+math.random(-35,35)!,!$smiddle+math.random(-35,35)!)\t(0,3000,\frz1000)\t(0,300,\fscx50\fscy50)}{\p1}m 30 30 l 17 17 l 29 7 l 30 30 l 39 20 l 51 32 l 30 30 l 40 40 l 30 52 l 30 30 l 19 40 l 8 30 l 30 30 l 8 29 l 0 0 l 16 17 m 59 0 l 30 7 l 30 30 l 38 20 l 59 0 m 59 59 l 51 33 l 30 30 l 40 39 l 59 59 m 0 59 l 19 41 l 30 30 l 29 52 l 0 59 "
+Comment: 0,0:00:56.88,0:00:57.34,Default,,0000,0000,0000,template noblank notext,!retime("syl",0,500)!{\frx360\an5\frz0\fscx40\fscy40\shad0\bord2\c&HFFFFFF&\3c&HA0A000&\blur2\fad(50,300)\pos(!$scenter+math.random(-35,35)!,!$smiddle+math.random(-35,35)!)\t(0,3000,\frz1000)\t(0,300,\fscx60\fscy60)}{\p1}m 30 30 l 17 17 l 29 7 l 30 30 l 39 20 l 51 32 l 30 30 l 40 40 l 30 52 l 30 30 l 19 40 l 8 30 l 30 30 l 8 29 l 0 0 l 16 17 m 59 0 l 30 7 l 30 30 l 38 20 l 59 0 m 59 59 l 51 33 l 30 30 l 40 39 l 59 59 m 0 59 l 19 41 l 30 30 l 29 52 l 0 59 "
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank loop 8,!retime("syl",math.random(-50,50),math.random(1000,1500))!{\fscx170\fscy170\bord1\be1\blur6\4c&ffffff&\1c&ffffff&\3c&ffffff&\move(!$scenter+math.random(-5,5)!,!$smiddle+math.random(-20,20)!,!$scenter+math.random(-50,80)!,!$smiddle+math.random(50,100)!)\an5\fad(50,200)\be3\!AutoTags(logic[math.random(4)],'alpha&HFF&','alpha0')!\p1}m 0 -1 l 0 -1 l 0 -1 l -1 0 l 0 1 l 1 0
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,random_color_1 = {"&HA99200&","&HF6D300&","&HFFF096&","&HFFFBE4&"} ; random_size_2 = {"20","15","30","40","21","22","23","24","25"}; logic ={"100"  ,"230"  ,"310"  ,"50"}
+Comment: 0,0:00:00.00,0:00:00.00,Default,AutoTags,0000,0000,0000,code syl,function AutoTags(Intervalo,Dato1,Dato2)            local RESULTADO=""     local SUERTE = 0     local CONTADOR = 0     local ARREGLO = 0                           local count = math.ceil(line.duration/Intervalo)                 			ARREGLO = {Dato1,Dato2}    			              for i = 1, count do               CONTADOR = i    	    	    		if Dato1 and Dato2 then     					if  CONTADOR%2 ==0 then    								SUERTE = ARREGLO[1]    					else    								SUERTE = ARREGLO[2]    					end	    		end     				    	RESULTADO = RESULTADO .."\\t(" ..(i-1)*Intervalo.. "," ..i*Intervalo.. ",\\" ..SUERTE..")"..""     			     end         		     return RESULTADO	  	    	               end
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0000,0000,0000,,

@@ -1,0 +1,23 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter2(ref) ci2[ref] = ci2[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci2 = { 0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template char,{\an5}!char_counter2(1)!!retime("start2syl",-900+(ci2[1]-1)*35,0)!{\frz100\bord2\1a&HFF&\3a&HFF&\move(!$center+40!,!$middle+15!,$scenter,$smiddle,0,500)\t(0,500,\fscx100\fscy100\frz0\alpha&H00)}
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank,!retime("syl",0,200)!{\an5\blur6\bord6\pos($scenter,$smiddle)\fad(0,100)\t(0,100,\3c&HFFFFFF&\fscx130\fscy130)\t(100,$dur,\3c!line.styleref.color3!\fscx100\fscy100\bord2.5\blur2)}
+Comment: 0,0:00:00.26,0:00:00.26,Default,,0000,0000,0000,template notext noblank loop 10,!retime("syl",0,900)!{\galovejiro\an5\move(!$center+math.random(-30,30)!,!$middle+math.random(-10,30)!,!$center+math.random(-30,30)!,!$middle+math.random(-10,30)!)\3c&HFFFFFF&\blur10\bord0.1\fscx15\fscy15\t(\fr!math.random(360)!\frx!math.random(360)!\fry!math.random(360)!)\fad(0,300)\p1}m 30 23 b 24 23 24 33 30 33 b 36 33 37 23 30 23 m 35 27 l 61 28 l 35 29 m 26 27 l 0 28 l 26 29 m 29 23 l 30 0 l 31 23 m 29 33 l 30 57 l 31 33 m 30 23 b 24 23 24 33 30 33 b 36 33 37 23 30 23 m 35 27 l 61 28 l 35 29 m 26 27 l 0 28 l 26 29 m 29 23 l 30 0 l 31 23 m 29 33 l 30 57 l 31 33
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template syl noblank,!maxloop(4)!!retime("syl",0,900)!{\an5\pos(!$center+math.random(-0.6*$width,0.6*$width)!,!$middle+math.random(-0.6*$height,0.6*$height)!)\blur10\bord0.1\c&HFFFFFF&\alpha&HFFFFFF&\fr!math.random(-40,40)!\fscx26\fscy30\t(!set_temp("time",math.random(0,$dur+299))!,!temp.time+1!,\alpha&H00&)\t(\fr!math.random(360)!\frx!math.random(360)!\fry!math.random(360)!)\fad(0,300)\p1}!heart!
