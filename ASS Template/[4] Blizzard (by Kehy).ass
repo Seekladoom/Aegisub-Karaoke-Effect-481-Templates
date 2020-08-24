@@ -1,0 +1,35 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 1600
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Last Style Storage: Karaoke FX
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,25,25,10,1
+Style: Ashita; boku wa kimi ni ai ni iku,Brianne's hand,50,&H00FFFFFF,&H000000FF,&H006E6E6E,&H00000000,0,0,0,0,100,100,0,0,1,1,0,5,0,0,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,,Hiệu ứng được viết bởi Keh Hikari - Vui lòng ghi rõ thông tin người viết fx khi sử dụng (Kehy)
+Dialogue: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,,Hiệu ứng trong video thì chữ hơi khó đọc do tuyết "lớn" quá nên mình đã sửa cho tuyết nhỏ hơn rồi
+Dialogue: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,,Chú ý là tuyết có 3 loại (để có cảm giác như bão tuyết đó mà)
+Dialogue: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,,-Line 11: Hạt tuyết vừa, rơi từ trên xuống, đứng phía sau chữ
+Dialogue: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,,-Line 14: Hạt tuyết lớn, rơi từ trên xuống, đứng phía trước chữ
+Dialogue: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,,-Line 15: Hạt tuyết nhỏ, bay từ trái sang rồi bay ... từa lưa tá lả
+Dialogue: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,,Lưu ý: Chỉnh độ phân giải trước rồi hẵn copy fx sang. Trong khi sử dụng, không nên đổi tên Style bất kỳ trong Style Manager và dùng Add edgeblur (mấy cái này hên xui, tại mình đang nghi là làm như vậy sẽ phá hư các tag nâng cao đã viết)
+Dialogue: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,,p/s: điều chỉnh lại độ phân giải trước khi sử dụng (biểu tượng Resample Resolution/ From Video/ OK - or - Subtitles/ Resample Resolution/ From Video/ OK)
+Dialogue: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,,Đây là fx của phần điệp khúc trong video, 2 fx tiếp theo thì tương đối đơn giản nên mình quyết định không share. Fx cuối cùng thì cũng y hệt fx này, chỉ thêm shapes Snowflower của Địa Ngục Máu thôi (mình không có xin bản quyền shape này đâu để share :D chỉ để làm đẹp video thôi :D Thông cảm)
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,-----------------------------------------------------------------------------------------------
+Comment: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,template noblank,!retime("start2syl",-1000,0)!{\pos($scenter,$smiddle)\an5\alpha&ff&\t(!($si-1)*80!,!($si+1)*80!,\1va(&0&,&100&,&100&,&ff&)\3va(&0&,&100&,&100&,&ff&)\1vc(&ffffff&,&H6E6E6E&,&H6E6E6E&,&000000&)\3vc(&ffffff&,&H6E6E6E&,&H6E6E6E&,&000000&)\bord1.8\blur6)\t(!($si+1)*80!,!($si+2)*80!,\1va(&0&,&0&,&0&,&100&)\3va(&0&,&0&,&0&,&100&)\1vc(&fffffff&,&ffffff&,&ffffff&,&H6E6E6E&)\3vc(&fffffff&,&ffffff&,&ffffff&,&H6E6E6E&)\bord2\blur8)\t(!($si+2)*80!,!($si+5)*80!,\alpha&0&\1c&ffffff&\bord1.5\blur4)\t(!($si+5)*80!,!($si+8)*80!,\alpha&HAF\blur0\bord0\be2)}
+Comment: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,template noblank loop 8,!retime("syl",math.random(-100,50),math.random(300,750))!{\move(!$scenter+math.random(-50,50)!,!$smiddle+math.random(-50,-30)!,!$scenter+math.random(-150,150)!,!$smiddle+math.random(40,140)!)\an5\1c&ffffff&\3c&ffffff&\bord!math.random(8,28)/10!\blur!math.random(20,70)/10!\p1\fsc!math.random(25,55)!\fad(100,200)}m 0 -5 b -3 -5 -5 -3 -5 0 b -5 3 -3 5 0 5 b 3 5 5 3 5 0 b 5 -3 3 -5 0 -5
+Comment: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,template noblank,!retime("syl",0,100)!{\pos($scenter,$smiddle)\an5\t(0,!(line.duration-100)/3!,\fscy180\fscx180\3c&ffffff&\blur5\bord1\3va(&0&,&0&,&ff&,&ff&)\1va(&ff&,&ff&,&0&,&0&)\1vc(&HADADAD&,&HADADAD&,&ffffff&,&ffffff&)\t(!line.duration/3!,!line.duration!,\fscy100\fscx100)\t(!line.duration-100!,!line.duration!,\alpha&ff&)}
+Comment: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,template noblank,!retime("syl",0,100)!{\pos($scenter,$smiddle)\an5\t(0,!(line.duration-100)/3!,\fscy180\fscx180\3c&ffffff&\blur5\bord1\3va(&ff&,&ff&,&0&,&0&)\1va(&0&,&0&,&ff&,&ff&)\1vc(&ffffff&,&ffffff&,&HADADAD&,&HADADAD&)\t(!line.duration/3!,!line.duration!,\fscy100\fscx100)\t(!line.duration-100!,!line.duration!,\alpha&ff&)}
+Comment: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,template noblank loop 5,!retime("syl",math.random(-350,-50),math.random(300,750))!{\move(!$scenter+math.random(-50,50)!,!$smiddle+math.random(-65,-30)!,!$scenter+math.random(-150,150)!,!$smiddle+math.random(80,180)!)\an5\1c&ffffff&\3c&ffffff&\bord!math.random(15,32)/10!\blur!math.random(25,100)/10!\p1\fsc!math.random(50,75)!\fad(150,250)}m 0 -5 b -3 -5 -5 -3 -5 0 b -5 3 -3 5 0 5 b 3 5 5 3 5 0 b 5 -3 3 -5 0 -5
+Comment: 0,0:00:00.00,0:00:00.00,Ashita; boku wa kimi ni ai ni iku,,0000,0000,0000,template noblank char loop 3,!retime("syl",math.random(-200,100),math.random(1000,1350))!{\fad(!math.random(150,350)!,!math.random(150,350)!)\moves4(!$scenter+math.random(-15,15)!,!$smiddle+math.random(-10,10)!,!$scenter+math.random(-150,550)!,!$smiddle+math.random(-80,80)!,!$scenter+math.random(50,250)!,!$smiddle+math.random(-30,30)!,!$scenter+math.random(100,750)!,!$smiddle+math.random(-80,80)!)\an5\p1\fsc!math.random(125,180)!\bord!math.random(15,35)/10!\blur!math.random(35,75)/10!}m 0 -2 b -2 0 0 -2 -2 0 b 0 2 -2 0 0 2 b 2 0 0 2 2 0 b 0 -2 2 0 0 -2

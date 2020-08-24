@@ -1,0 +1,36 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,From Keh,0000,0000,0000,,Hiệu ứng được viết bởi Keh Hikari - Vui lòng ghi rõ thông tin người viết fx khi sử dụng (Kehy)
+Comment: 0,0:00:00.00,0:00:00.00,Default,From Keh,0000,0000,0000,,Fx này nhìn khá là đơn giản và code cũng khá là đơn giản ... chỉnh sửa thêm chút đỉnh cũng được, nhất là mấy cái hạt nhỏ nhỏ. Lúc đầu mình để tới loop 20 30 40 50 lận nhưng encode 1 lần thấy lâu quá, lại ghi dư 1 line quan trọng nên phải encode lại, do đó mới nhìn thấy loop ít :D
+Comment: 0,0:00:00.00,0:00:00.00,Default,From Keh,0000,0000,0000,,Lưu ý: Cần phải cài Vsfiltermod.dll trước khi sửa dụng. Chỉnh độ phân giải trước rồi hẵn copy fx sang. Trong khi sử dụng, không nên đổi tên Style bất kỳ trong Style Manager và dùng Add edgeblur (mấy cái này hên xui, tại mình đang nghi là làm như vậy sẽ phá hư các tag nâng cao đã viết)
+Comment: 0,0:00:00.00,0:00:00.00,Default,From Keh,0000,0000,0000,,p/s: điều chỉnh lại độ phân giải trước khi sử dụng (biểu tượng Resample Resolution/ From Video/ OK - or - Subtitles/ Resample Resolution/ From Video/ OK)
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,-------------------------------------------------------------------------------------------------
+Comment: 0,0:00:00.00,0:00:00.00,Kara 1,,0000,0000,0000,code line all,dem=0
+Comment: 0,0:00:00.00,0:00:00.00,Kara 1,,0000,0000,0000,code once all,function save(a) dem=dem+1; return ""; end
+Comment: 0,0:00:00.00,0:00:00.00,Kara 1,,0000,0000,0000,template noblank char,!save(1)!!retime("start2syl",-800,0)!{\pos($scenter,$smiddle)\org($scenter,$smiddle)\an5\fscx105\fscy105\alpha&ff&\3c&H793C1B&\1c&HFFE7E0&\t(!(dem-1)*20!,!(dem+4)*20!,\fscx120\fscy120\alpha&0&\1c&ffffff&\3c&ffffff&\bord2\blur8)\t(!(dem+4)*20!,!(dem+9)*20!,\3c&H793C1B&\1c&HFFE7E0&\alpha&HAF\fscx100\fscy100)}
+Comment: 0,0:00:00.00,0:00:00.00,Kara 1,,0000,0000,0000,template noblank char,!retime("syl",0,300)!{\pos($scenter,$smiddle)\an5\t(0.8,\fscx135\fscy135\1c&ffffff&\3c&ffffff&\be3\blur10\alpha&ff&)}
+Comment: 0,0:00:00.00,0:00:00.00,Kara 1,,0000,0000,0000,template noblank notext char loop 6,!retime("syl",math.random(-100,100),math.random(1000,1500))!{\move(!$scenter+math.random(-10,10)!,!$smiddle+math.random(-10,10)!,!$scenter+math.random(-25,25)!,!$smiddle+math.random(50,150)!)\an5\1c&ffffff&\3c&ffffff&\be5\blur12\bord1.5\fscx1\fscy1\alpha&ff&\t(!(j*70)-30!,!(j*70)+math.random(70,120)!,\fscx8\fscy8\alpha&0&)\t(!(j*200)+math.random(150,160)!,!(j*220)+math.random(160,250)!,\alpha&ff&)\p1}m -50 0 b -17 -1 -6 -1 -8 -6 b -1 -6 -1 -17 0 -50 b 1 -17 1 -6 8 -6 b 6 -1 17 -1 50 0 b 17 1 6 1 8 6 b 1 6 1 17 0 50 b -1 17 -1 6 -8 6 b -7 0 -17 1 -50 0
+Comment: 0,0:00:00.00,0:00:00.00,Kara 1,,0000,0000,0000,template noblank loop 8,!retime("syl",math.random(-50,50),math.random(1000,1500))!{\bord1\be1\blur6\4c&ffffff&\1c&ffffff&\3c&ffffff&\move(!$scenter+math.random(-5,5)!,!$smiddle+math.random(-20,20)!,!$scenter+math.random(-50,80)!,!$smiddle+math.random(50,100)!)\an5\fad(50,200)\be3\p1}m 0 -1 l 0 -1 l 0 -1 l -1 0 l 0 1 l 1 0
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,-------------------------------------------------------------------------------------------------
+Comment: 0,0:00:00.00,0:00:00.00,Kara 2,,0000,0000,0000,code line all,dem=0
+Comment: 0,0:00:00.00,0:00:00.00,Kara 2,,0000,0000,0000,code once all,function save(a) dem=dem+1; return ""; end
+Comment: 0,0:00:00.00,0:00:00.00,Kara 2,,0000,0000,0000,template noblank char,!save(1)!!retime("start2syl",-900,0)!{\moves3(!$scenter-50!,$smiddle,!$scenter+200!,$smiddle,$scenter,$smiddle,0,!(dem+10)*20!)\org($scenter,$smiddle)\an5\fscx105\fscy105\alpha&ff&\3c&H793C1B&\1c&HFFE7E0&\t(!(dem-1)*20!,!(dem+5)*20!,\fscx120\fscy120\alpha&0&\1c&ffffff&\3c&ffffff&\bord2\blur8)\t(!(dem+5)*20!,!(dem+10)*20!,\3c&H793C1B&\1c&HFFE7E0&\alpha&HAF\fscx100\fscy100)}
+Comment: 0,0:00:00.00,0:00:00.00,Kara 2,,0000,0000,0000,template noblank char,!retime("syl",0,100)!{\pos($scenter,$smiddle)\an5\bord2\3c&ffffff&\blur8\t(0,!line.duration/2.5!,0.8,\fscx150\fscy150\be3\blur10\bord3\3c&H793C1B&\1c&HFFE7E0&)\t(!line.duration/2.5!,!line.duration!,\bord2\be2\blur2\alpha&HAF\fscx100\fscy100\3c&H793C1B&\1c&HFFE7E0&)}
+Comment: 0,0:00:00.00,0:00:00.00,Kara 2,,0000,0000,0000,template noblank char,!retime("syl2end",0,500)!{\move($scenter,$smiddle,800,$smiddle,!line.duration-400!,!line.duration!)\an5\be2\blur2\alpha&HAF\fscx100\fscy100\3c&H793C1B&\1c&HFFE7E0&\t(!line.duration-500!,!line.duration!,\fscx180\fscy180\alpha&ff&\frz!math.random(360,720)!)}
+Comment: 0,0:00:00.00,0:00:00.00,Kara 2,,0000,0000,0000,template noblank notext char loop 4,!retime("syl",50,1500)!{\move(!$scenter+math.random(-10,10)!,!$smiddle+math.random(-5,5)!,!$scenter+math.random(-75,75)!,!$smiddle+math.random(-75,75)!)\an5\1c&ffffff&\3c&ffffff&\be5\blur12\bord1\fscx4\fscy4\alpha&ff&\t(!(j*70)-30!,!(j*70)+math.random(70,120)!,\fscx10\fscy10\alpha&0&)\t(!(j*200)+math.random(150,160)!,!(j*220)+math.random(160,250)!,\alpha&ff&)\p1}m -50 0 b -17 -1 -6 -1 -8 -6 b -1 -6 -1 -17 0 -50 b 1 -17 1 -6 8 -6 b 6 -1 17 -1 50 0 b 17 1 6 1 8 6 b 1 6 1 17 0 50 b -1 17 -1 6 -8 6 b -7 0 -17 1 -50 0
+Comment: 0,0:00:00.00,0:00:00.00,Kara 2,,0000,0000,0000,template noblank loop 5,!retime("syl",50,1000)!{\bord1\be1\blur6\4c&ffffff&\1c&ffffff&\3c&ffffff&\move(!$scenter+math.random(-5,5)!,!$smiddle+math.random(-20,20)!,!$scenter+math.random(-120,120)!,!$smiddle+math.random(-80,80)!)\fad(50,200)\be3\p1}m 0 -1 l 0 -1 l 0 -1 l -1 0 l 0 1 l 1 0

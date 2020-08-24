@@ -1,0 +1,27 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+Last Style Storage: Default
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,UVN Thang Vu,40,&H00FFFFFF,&H000000FF,&H00222827,&H00000000,0,0,0,0,100,100,0,0,1,2,0,5,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,Credit,0000,0000,0000,,Kara-Eff được viết bởi Badd ( This Kara-Eff was written by Badd ), nếu sử dụng xin ghi lại một dòng credit - Kara-FX by Badd ^^ ( If you use it, please leave a credit FX to me ). Cảm ơn bạn ( Thanks )
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,temp = {}; function set_temp(ref,val) temp[ref] = val; return val; end; x = "m 46 21 l 50 25 l 55 22 l 51 26 l 53 31 l 50 27 l 45 30 l 49 26 l 46 21"; delay = 4000 ;
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template syl noblank,!maxloop(15)!!retime("syl",-100,500)!{\1a&HFF&\fad(200,200)\fscx130\fscy130\alpha\blur3\shad0\pos($scenter,$smiddle)\fr!-(360/maxj)*(j-1)!\3c!_G.ass_color(_G.HSV_to_RGB($si/$syln*400,0.7,1))!\c&HFFFFFF&\t(0,1000,\fr!-(360/maxj)*(j-1)-90!)\t(1000,3000,\fr!-(360/maxj)*(j-1)-360!\fscy0)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,Vòng xoay,0000,0000,0000,template syl noblank,!maxloop(15)!!retime("syl",-100,500)!{\1a&HC0&\fad(200,200)\fscx130\fscy130\alpha\bord0\shad0\pos($scenter,$smiddle)\fr!-(360/maxj)*(j-1)!\3c!_G.ass_color(_G.HSV_to_RGB($si/$syln*400,0.7,1))!\c&HFFFFFF&\t(0,1000,\fr!-(360/maxj)*(j-1)-90!)\t(1000,3000,\fr!-(360/maxj)*(j-1)-360!\fscy0)}
+Comment: 1,0:00:00.00,0:00:00.00,Default,Leadin text,0000,0000,0000,template char,!retime("start2syl",-750,0)!{\fad(300,0)\an5\move(!$center+math.random(-100,100)!,!$middle+math.random(-150,150)!,$center,$middle,0,100)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,2light syl,0000,0000,0000,template noblank multi,!retime("syl",0,0)!{\pos($scenter,$smiddle)\an5\t(0,!line.duration/2.5!,0.7,\fscx150\fscy150\bord3\blur6)\t(!line.duration/2.5!,!line.duration!,!10/7!,\fscx0\fscy0\frz0\blur3\bord1)\t(0,$dur,\\fr!-(360/maxj)*(j-1)-360!)}
+Comment: 0,0:00:12.52,0:00:17.57,Default,,0000,0000,0000,karaoke,{\k27}{\k30}Do{\k24}kka {\k17}u{\k25}e {\k14}no {\k28}so{\k40}ra {\k23}de {\k41}sa{\k18}ppa{\k23}ri {\k14}ki{\k13}i{\k27}te {\k25}na{\k29}in{\k12}da{\k27}ro{\k48}u?
+Comment: 0,0:00:17.57,0:00:21.32,Default,,0000,0000,0000,karaoke,{\k4}{\k26}Wa{\k15}za{\k25}to {\k27}ko{\k19}bo{\k13}su {\k34}SA{\k51}IN {\k28}mi{\k23}no{\k32}ga{\k15}su {\k37}ki{\k26}mi
+Comment: 0,0:00:21.32,0:00:26.07,Default,,0000,0000,0000,karaoke,{\k1}{\k14}Ho{\k14}ra {\k14}i{\k11}tsu{\k13}da{\k17}t{\k27}te {\k23}o{\k15}na{\k11}ji {\k13}de {\k12}wa{\k20}ka{\k9}ri{\k28}a{\k27}tte{\k12}... to{\k15}n{\k22}da {\k16}ka{\k8}n{\k31}chi{\k13}ga{\k14}i {\k25}da {\k50}yo
