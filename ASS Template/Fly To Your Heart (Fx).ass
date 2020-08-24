@@ -1,0 +1,36 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,fxgroup.A = (math.mod(syl.i,2) == 0)
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,fxgroup.B = (math.mod(syl.i,2) == 1)
+Comment: 0,0:00:00.00,0:00:00.00,Default,Get Scr Resolution,0000,0000,0000,code once,xres, yres = _G.aegisub.video_size() if xres == nil  then x_rat = 1 y_rat = 1 else x_rat = xres/1280 y_rat = x_rat end
+Comment: 0,0:00:00.00,0:00:00.00,Default,Get Frame Dur,0000,0000,0000,code once,msa = _G.aegisub.ms_from_frame(1) msb = _G.aegisub.ms_from_frame(100) if msa == nil and msb == nil then frame_dur = 33 else frame_dur = (msb-msa)/100 end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,math.randomseed(8317)
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,temp = {}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,function set_temp(ref,val) temp[ref] = val; return val; end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,shape = {"m 5 0 b 2 0 0 2 0 5 b 0 8 2 10 5 10 b 8 10 10 8 10 5 b 10 2 8 0 5 0","m 30 23 b 24 23 24 33 30 33 b 36 33 37 23 30 23 m 35 27 l 61 28 l 35 29 m 26 27 l 0 28 l 26 29 m 29 23 l 30 0 l 31 23 m 29 33 l 30 57 l 31 33"}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,function tags(dur)  tag =  string.format("\\t(%d,%d,\\fscx%d\\fscy%d)\\t(%d,%d,\\fscx32\\fscy35)",set_temp("time",math.random(dur-200)),temp.time+1,set_temp("size",math.random(10,100)),temp.size,temp.time+2,temp.time+100) return tag end
+Comment: 0,0:00:00.00,0:00:00.00,Default,Beizer Curve Move,0000,0000,0000,code once,function bezier_move(x1,y1,x2,y2,x3,y3,x4,y4,t1,t2,accel,afterimage_blur,afterimage_dur,density) if density == 0 or density == nil then density = 1 end if afterimage_blur == 0 or afterimage_blur == nil then x_blur = 0 y_blur = 0 else x_blur = math.random(-afterimage_blur,afterimage_blur) y_blur = math.random(-afterimage_blur,afterimage_blur) end if afterimage_dur == nil or afterimage_dur < frame_dur then afterimage_dur = frame_dur end  if accel == nil then accel = 1 end x_pos = {} y_pos = {} dur = t2 - t1 frames = math.floor(dur/(frame_dur/density)) x_pos[j] =  (1-(j/frames)^accel)^3 * x1 + 3*(1-(j/frames)^accel)^2 * ((j/frames)^accel) * x2 + 3*(1-(j/frames)^accel) * ((j/frames)^accel)^2 * x3 + ((j/frames)^accel)^3 * x4  y_pos[j] = (1-(j/frames)^accel)^3 * y1 + 3*(1-(j/frames)^accel)^2 * ((j/frames)^accel) * y2 + 3*(1-(j/frames)^accel) * ((j/frames)^accel)^2 * y3 + ((j/frames)^accel)^3 * y4  if j == 1 then maxloop(frames) end retime("presyl",t1+(j-1)*(frame_dur/density),t1+j*(frame_dur/density)+afterimage_dur) return string.format("\\move(%d,%d,%d,%d)",x_pos[j],y_pos[j],x_pos[j] + x_blur ,y_pos[j] + y_blur) end
+Comment: 0,0:00:00.00,0:00:00.00,Default,Bezier Effect,0000,0000,0000,template noblank notext fxgroup A,{\an5!bezier_move($center+((j == 1) and set_temp("X1",math.random(5,10)) or temp.X1),$middle+((j == 1) and set_temp("Y1",math.random(5,10)) or temp.Y1),$center+temp.X1+((j == 1) and set_temp("X2",math.random(-140,140)) or temp.X2),$middle+((j == 1) and set_temp("Y2",math.random(-5,5)) or temp.Y2),$center-temp.X1+((j == 1) and set_temp("X3",math.random(-140,140)) or temp.X3),$middle+((j == 1) and set_temp("Y3",-80) or temp.Y3),$center,$middle,-800,0,2.2,((j > maxj*0.95) and syl.width or 0),(j > maxj*0.95) and $dur+400 or 400,4)!\4a&HFF&\1c&HFFFFFF&\fad(0,300)\fscx15\fscy15!(j > maxj*0.95) and tags(line.duration) or ""!\blur3\3c!set_temp("color",_G.ass_color(_G.HSV_to_RGB (45,(j/maxj)^6,1)))!\3a&H80&\3c!(j > maxj*0.95) and _G.ass_color(math.random(255),math.random(255),math.random(255)) or temp.color!\p1!((j == 1) and "\\alpha&HFF&" or "")!}!(j > maxj*0.95) and shape[2] or shape[1]!
+Comment: 0,0:00:00.00,0:00:00.00,Default,Bezier Effect,0000,0000,0000,template noblank notext fxgroup B,{\an5!bezier_move($center-((j == 1) and set_temp("X1",math.random(5,15)) or temp.X1),$middle-((j == 1) and set_temp("Y1",math.random(5,15)) or temp.Y1),$center+temp.X1+((j == 1) and set_temp("X2",math.random(-140,140)) or temp.X2),$middle+((j == 1) and set_temp("Y2",math.random(-10,10)) or temp.Y2),$center-temp.X1+((j == 1) and set_temp("X3",math.random(-140,140)) or temp.X3),$middle+((j == 1) and set_temp("Y3",80) or temp.Y3),$center,$middle,-800,0,3,(j > maxj*0.95) and syl.width or 0,(j > maxj*0.95) and $dur+400 or 400,4)!\4a&HFF&\1c&HFFFFFF&\fad(0,300)\fscx15\fscy15!(j > maxj*0.95) and tags(line.duration) or ""!\blur3\3c!set_temp("color",_G.ass_color(_G.HSV_to_RGB (45,(j/maxj)^6,1)))!\3a&H80&\3c!(j > maxj*0.95) and _G.ass_color(math.random(255),math.random(255),math.random(255)) or temp.color!\p1!((j == 1) and "\\alpha&HFF&" or "")!}!(j > maxj*0.95) and shape[2] or shape[1]!
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter2(ref) ci2[ref] = ci2[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci2 = { 0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 1,0:00:00.00,0:00:00.63,Default,,0000,0000,0000,template char noblank,!char_counter(1)!!retime("start2syl", -600+(ci[1]-1)*45,0)!{\fad(0,0)\an5\blur0\pos($center,$middle)\fscx0\fscy0\t(0,200,\fscx150\fscy150)\t(200,350,\fscx75\fscy75)\t(350,400,\blur0\bord1.5\fscx100\fscy100)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter(ref) ci[ref] = ci[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci = { 0,0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,temp = {}
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank,!retime("syl",0,200)!{\an5\blur6\bord6\pos($scenter,$smiddle)\fad(0,100)\t(0,100,\3c&HFFFFFF&\fscx130\fscy130)\t(100,$dur,\3c!line.styleref.color3!\fscx100\fscy100\bord2.5\blur2)}

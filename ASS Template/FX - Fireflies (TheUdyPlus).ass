@@ -1,0 +1,26 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter2(ref) ci2[ref] = ci2[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci2 = { 0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 3,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template syl noblank char,!char_counter2(1)!!retime("start2syl",-900+(ci2[1]-1)*15,0)!{\an5\moves3($scenter,$smiddle,!$scenter+math.random(-170,170)*(-1)^(syl.i+1)!,!$smiddle+math.random(-140,170)!,!$scenter!,!$smiddle!,0,900)\4c&HFFFFFF&\3c&HFFFFFF&\1vc(&H000000&,&H000000&,&HFFFFF&,&HFFFFFF&)\bord2\blur1\fscy180\t(0,500,\fscy100)\fad(500,0)}
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank multi,!retime("syl",0,0)!{\an5\blur6\bord6\pos($scenter,$smiddle)\fad(0,100)\t(0,100,\3c&HFFFFFF&\fscx130\fscy130)\t(100,$dur,\1a&HFF&\3c!line.styleref.color3!\fscx100\fscy100\bord3\blur3)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl,rand=math.random(-180,90)
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl,rand2=math.random(-80,90)
+Comment: 0,0:00:51.06,0:00:51.06,Default,,0000,0000,0000,template noblank notext multi,!retime("syl",0,2000)!{\an5\moves4(!$scenter!,$smiddle,!$scenter+rand!,!$smiddle-50!,!$scenter+rand2!,!$smiddle-50!,!$scenter+rand!,!$smiddle-rand2!)\c&HFFFFFF&\3c&HFFFFFF&\\shad0\fscx70\fscy70\blur9\p1}m 0 16 b 0 16 0 16 0 16 b 0 16 0 16 0 16 b 0 16 0 16 0 16 b 0 16 0 16 0 16 b 0 0 20 0 20 16 b 20 16 20 16 20 16 b 20 33 0 33 0 16
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template notext noblank multi loop 20,!retime("syl",0+(j*20),2000+(j*20))!{\an5\moves4(!$scenter!,$smiddle,!$scenter+rand!,!$smiddle-50!,!$scenter+rand2!,!$smiddle-50!,!$scenter+rand!,!$smiddle-rand2!)\fscx1\fscy1\bord3\blur2\3c&HFFFFFF&\c&HFFFFFF&\p1}m 0 16 b 0 16 0 16 0 16 b 0 16 0 16 0 16 b 0 16 0 16 0 16 b 0 16 0 16 0 16 b 0 0 20 0 20 16 b 20 16 20 16 20 16 b 20 33 0 33 0 16
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0000,0000,0000,,

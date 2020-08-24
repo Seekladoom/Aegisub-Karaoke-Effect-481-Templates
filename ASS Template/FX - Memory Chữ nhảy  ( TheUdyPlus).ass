@@ -1,0 +1,25 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 5,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank char,!retime("start2syl",-600+syl.i*155,0)!{\an5\bord1\blur2\fscy10\c&HFFFFFF&\3c&H464648&\move($center,!$middle-40!,$scenter,$smiddle,0,200)\fad(300,0)\t(0,100,\bord3\blur3\fscx100\fscy100\3c&H464648&\c&HFFFFFF&)}
+Comment: 5,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template syl noblank,!retime("syl",0,0)!{\an5\move($scenter,!$middle-25!,$scenter,$middle,0,100)\t(0,100,\fscx100\fscy100\3c&H464648&\bord4\blur4)\t(100,$sdur,\fscx100\fscy100\bord1\blur1\3c&H464648&)}
+Comment: 4,0:00:00.00,0:00:00.00,Default,text lead-out,0000,0000,0000,template noblank,!retime("syl2end",0,-800+($si/$syln)*800)!{\an5\pos($center,$middle)\fad(0,300)}
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank notext loop 15,!retime("presyl",0,600+(j-1)*30)!{\shad0\bord2\an5\blur4\fscx30\fscy30\1c&HFFFFFF&\3c&H00DEE1&\move(!math.random($sleft,$sright)!,$middle,!math.random($sleft-40,$sright+40)!,!$middle+40!)\org(!$center-400!,$middle)\t(0,250,0.5,\fr!math.random(6,9)!\t(250,700,2,\fr!math.random(-2,-1)!)\fad(0,100)\p1}!sao[math.random(5)]!
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank notext loop 15,!retime("presyl",0,600+(j-1)*30)!{\shad0\bord2\an5\blur4\fscx10\fscy10\1c&HFFFFFF&\3c&H00DEE1&\move(!math.random($sleft,$sright)!,$middle,!math.random($sleft-40,$sright+40)!,!$middle+40!)\org(!$center-400!,$middle)\t(0,250,0.5,\fr!math.random(6,9)!\t(250,700,2,\fr!math.random(-2,-1)!)\fad(0,100)\p1}!tron[math.random(3)]!
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,sao = {"m 25 0 l 34 15 l 50 19 l 40 33 l 41 49 l 25 43 l 11 50 l 11 33 l 0 21 l 15 15 l 25 0 "};
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,tron = {"m 3 3 b 6 -1 13 -1 17 3 b 20 7 20 13 17 17 b 14 21 6 21 3 17 b 0 13 0 7 3 3 "};
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0000,0000,0000,,

@@ -1,0 +1,24 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Last Style Storage: Default
+Video File: ?dummy:30.000000:9000:640:480:0:0:0:c
+Video Aspect Ratio: 0
+Video Zoom: 8
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: Furigana,Arial,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.27,0:00:05.33,Furigana,,0000,0000,0000,karaoke,{\k123}ちぇ{\k103}ばる {\k54}き{\k58}ふぇ{\k43}るる　{\k42}ぢょ{\k83}よ
+Dialogue: 0,0:00:05.81,0:00:09.70,Furigana,,0000,0000,0000,karaoke,{\k121}なる {\k47}ぼ{\k42}ぬん {\k63}ぬん {\k26}ま{\k90}ち
+Dialogue: 0,0:00:10.19,0:00:14.15,Furigana,,0000,0000,0000,karaoke,{\k120}のる {\k49}あん{\k56}ご {\k57}し{\k36}ぽ{\k78}そ
+Dialogue: 0,0:00:14.15,0:00:17.95,Furigana,,0000,0000,0000,karaoke,{\k9}あん{\k18}だる {\k13}なん {\k28}ね{\k86}げ {\k28}ちゃん{\k17}なん{\k28}ち{\k30}ぬん {\k25}よ{\k25}う{\k24}が{\k49}た

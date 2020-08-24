@@ -1,0 +1,27 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:32.41,Default,,0000,0000,0000,template noblank char,!retime("start2syl",-900+($si-1)*60,0)!{\an5\move($smiddle,!$smiddle-50!,$scenter,$smiddle,0,900)\c&HFFFFFF&\3c&H000000&\bord1\blur4\fad(700,0)}
+Comment: 5,0:00:00.00,0:00:00.00,Default,hilight (char),0000,0000,0000,template noblank multi syl loop 7,!retime("syl",0+(j-1)*60,250+(j-1)*60)!{\an5\pos($scenter,$smiddle)\fad(0,!$dur+360!)\blur1\bord2\t(0,500,\fscx100\fscy100)\t(50,!$dur+600!,\alpha&HFF&\fscx0\fscy0\frz360)}
+Comment: 5,0:00:00.00,0:00:00.00,Default,hilight (char),0000,0000,0000,template noblank multi syl loop 7,!retime("syl",0+(j-1)*60,250+(j-1)*60)!{\an5\pos($scenter,$smiddle)\fad(0,!$dur+360!)\blur1\bord2\t(0,500,\fscx100\fscy100)\t(50,!$dur+600!,\alpha&HFF&\fscx0\fscy0\frz-360)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,AutoTags,0000,0000,0000,code syl,function AutoTags(Intervalo,Dato1,Dato2)            local RESULTADO=""     local SUERTE = 0     local CONTADOR = 0     local ARREGLO = 0                           local count = math.ceil(line.duration/Intervalo)                 			ARREGLO = {Dato1,Dato2}    			              for i = 1, count do               CONTADOR = i    	    	    		if Dato1 and Dato2 then     					if  CONTADOR%2 ==0 then    								SUERTE = ARREGLO[1]    					else    								SUERTE = ARREGLO[2]    					end	    		end     				    	RESULTADO = RESULTADO .."\\t(" ..(i-1)*Intervalo.. "," ..i*Intervalo.. ",\\" ..SUERTE..")"..""     			     end         		     return RESULTADO	  	    	               end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,logic ={"1000"  ,"1230"  ,"1310"  ,"150"}
+Comment: 1,0:00:00.00,0:00:00.02,Default,hearts,0000,0000,0000,template multi noblank notext loop 20,!retime("syl",0,500)!{\c&HD9C400&\frz!0+j*(360/10)!\3c&HFFFFFF&\bord0\fscx10\fscy10\an7\pos($center,$middle)\!AutoTags(logic[math.random(4)],'alpha&HFF&','alpha0')!\shad0\blur2\t(0,!$dur+600!,\fsvp40\frz!200+j*(360/10)!\fscx40\fscy40)\fad(0,200)\p1}m 0 -20 b 7 -35 17 -25 14 -17 b 14 -13 0 -2 0 0 b 0 -2 -14 -13 -14 -17 b -16 -25 -7 -35 0 -20 "
+Comment: 1,0:00:00.00,0:00:00.02,Default,hearts,0000,0000,0000,template multi noblank notext loop 20,!retime("syl",500,900)!{\c&HD9C400&\frz!0+j*(-360/10)!\3c&HFFFFFF&\bord0\fscx10\fscy10\an7\pos($center,$middle)\!AutoTags(logic[math.random(4)],'alpha&HFF&','alpha0')!\shad0\blur2\t(0,!$dur+600!,\fsvp40\frz!200+j*(-360/10)!\fscx40\fscy40)\fad(0,200)\p1}m 0 -20 b 7 -35 17 -25 14 -17 b 14 -13 0 -2 0 0 b 0 -2 -14 -13 -14 -17 b -16 -25 -7 -35 0 -20 "
+Comment: 1,0:00:00.00,0:00:00.02,Default,hearts,0000,0000,0000,template multi noblank notext loop 20,!retime("syl",900,1300)!{\c&HD9C400&\frz!0+j*(360/10)!\3c&HFFFFFF&\bord0\fscx10\fscy10\an7\pos($center,$middle)\!AutoTags(logic[math.random(4)],'alpha&HFF&','alpha0')!\shad0\blur2\t(0,!$dur+600!,\fsvp40\frz!200+j*(360/10)!\fscx40\fscy40)\fad(0,200)\p1}m 0 -20 b 7 -35 17 -25 14 -17 b 14 -13 0 -2 0 0 b 0 -2 -14 -13 -14 -17 b -16 -25 -7 -35 0 -20 "
+Comment: 1,0:00:00.00,0:00:00.02,Default,hearts,0000,0000,0000,template multi noblank notext loop 20,!retime("syl",1300,1700)!{\c&HD9C400&\frz!0+j*(-360/10)!\3c&HFFFFFF&\bord0\fscx10\fscy10\an7\pos($center,$middle)\!AutoTags(logic[math.random(4)],'alpha&HFF&','alpha0')!\shad0\blur2\t(0,!$dur+600!,\fsvp40\frz!200+j*(-360/10)!\fscx40\fscy40)\fad(0,200)\p1}m 0 -20 b 7 -35 17 -25 14 -17 b 14 -13 0 -2 0 0 b 0 -2 -14 -13 -14 -17 b -16 -25 -7 -35 0 -20 "
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0000,0000,0000,,

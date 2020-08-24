@@ -1,0 +1,34 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Flower&Circle,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,--------,,0000,0000,0000,,Vui lòng ghi rõ nguồn TheUdyPlus khi sử dụng !!
+Comment: 0,0:00:00.00,0:00:00.00,--------,,0000,0000,0000,,Điều chỉnh độ phân giải trước khi Apply [Resample Resolution/ From Video/ OK] cái khung hình vuông tròn màu xanh kế con cá đấy !!
+Comment: 0,0:00:00.00,0:00:00.00,--------,,0000,0000,0000,,Only available in VSFilterMod !!
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,
+Comment: 0,0:00:00.00,0:00:00.00,Flower&Circle,,0000,0000,0000,code syl all,function char_counter(ref) ci[ref] = ci[ref] + 1; return "" end ;
+Comment: 0,0:00:00.00,0:00:00.00,Flower&Circle,,0000,0000,0000,code line all,ci = { 0,0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 0,0:01:03.23,0:01:03.23,Flower&Circle,,0000,0000,0000,code line all,temp = {}; ci = {0,0}; cn = _G.unicode.len(orgline.text_stripped:gsub(" ","")); function set_temp(ref,val) temp[ref] = val return val end; delay = 800; delay_2 = 300
+Comment: 1,0:00:00.00,0:00:00.00,Flower&Circle,,0000,0000,0000,template noblank char,!char_counter(1)!!retime("start2syl",-1700+(ci[1]-1)*45,0)!{\an5\moves4(!$lcenter!,!$lmiddle+20*(-1)^(syl.i+1)!,!$scenter!,!$smiddle-70*(-1)^(syl.i+1)!,!$scenter!,!$smiddle+70*(-1)^(syl.i+1)!,$scenter,$smiddle,0,1400)\1vc(&H971F75&,&H971F75&,&HFFFFFF&,&HFFFFFF&)\3c&H971F75&\bord0\blur!math.random(3,7)!\fsc!math.random(20,150)!\t(1000,1500,\fscx100\fscy100\bord0.5\blur0)\fad(500,0)}
+Comment: 0,0:00:00.00,0:00:00.02,Flower&Circle,Flower,0000,0000,0000,template multi noblank notext loop 20,!retime("syl",0,500)!{\frz!-700+j*(360/5)!\fsvp0\1vc(&H8F8D88&,&H8F8D88&,&HFFFFFF&,&HFFFFFF&)\3c&H8F8D88&\bord1\fscx150\fscy150\an7\pos(!$center-30!,!$middle-30!)\shad0\blur2\t(0,!$dur+600!,\fsvp0\frz!-800+j*(360/5)!\fscx150\fscy150)\fad(400,400)\p1}m 0 0 b 2 2 6 5 11 4 b 19 7 12 13 6 10 b 3 8 0 3 0 0
+Comment: 0,0:00:00.00,0:00:00.02,Flower&Circle,Circle,0000,0000,0000,template multi noblank notext loop 20,!retime("syl",0,500)!{\c&HFFFFFF&\frz!-0+j*(360/5)!\fsvp40\3c&HFFFFFF&\bord1\fscx10\fscy10\an7\pos(!$center-30!,!$middle-30!)\shad0\blur2\t(0,!$dur+600!,\fsvp40\frz!-50+j*(360/5)!\fscx10\fscy10)\fad(400,400)\p1}m 0 -20 b 7 -35 17 -25 14 -17 b 14 -13 0 -2 0 0 b 0 -2 -14 -13 -14 -17 b -16 -25 -7 -35 0 -20 "
+Comment: 0,0:00:00.00,0:00:00.02,Flower&Circle,Circle,0000,0000,0000,template multi noblank notext loop 20,!retime("syl",0,500)!{\c&HFFFFFF&\frz!0+j*(360/5)!\fsvp40\3c&HFFFFFF&\bord1\fscx10\fscy10\an7\pos(!$center-30!,!$middle-30!)\shad0\blur2\t(0,!$dur+600!,\fsvp40\frz!200+j*(360/5)!\fscx10\fscy10)\fad(400,400)\p1}m 0 -20 b 7 -35 17 -25 14 -17 b 14 -13 0 -2 0 0 b 0 -2 -14 -13 -14 -17 b -16 -25 -7 -35 0 -20 "
+Comment: 5,0:00:32.62,0:00:32.67,Flower&Circle,hilight (char),0000,0000,0000,template noblank,!retime("syl",0,200)!{\an5\pos($scenter,$smiddle)\blur3\bord1\t(0,200,\fscx180\fscy180)\t(50,!$dur+200!,\3c&HFFFFFF&\c&HFFFFFF&\fscx100\fscy100)\t(200,$dur,\1vc(&H971F75&,&H971F75&,&HFFFFFF&,&HFFFFFF&)\3c&H971F75&\bord0.5\blur0)}
+Comment: 0,0:00:00.00,0:00:00.02,Flower&Circle,lead-out(text),0000,0000,0000,template noblank,!retime("syl2end",200,$dur+1000)!{\an5\pos($scenter,$smiddle)\1vc(&H971F75&,&H971F75&,&HFFFFFF&,&HFFFFFF&)\3c&H971F75&\bord0.5\blur4\t(400,800,\fscx170\fscy170\alpha&HFF&)}
+Comment: 0,0:00:00.00,0:00:00.00,Flower&Circle,,0000,0000,0000,code once all,function AutoTags(Intervalo,Dato1,Dato2)            local RESULTADO=""     local SUERTE = 0     local CONTADOR = 0     local ARREGLO = 0                           local count = math.ceil(line.duration/Intervalo)                 			ARREGLO = {Dato1,Dato2}    			              for i = 1, count do               CONTADOR = i    	    	    		if Dato1 and Dato2 then     					if  CONTADOR%2 ==0 then    								SUERTE = ARREGLO[1]    					else    								SUERTE = ARREGLO[2]    					end	    		end     				    	RESULTADO = RESULTADO .."\\t(" ..(i-1)*Intervalo.. "," ..i*Intervalo.. ",\\" ..SUERTE..")"..""     			     end         		     return RESULTADO	  	    	               end
+Comment: 0,0:00:41.80,0:00:41.80,Flower&Circle,,0000,0000,0000,code once all,alp ={"&HAF&","&HFF&"}; gota = "m 7 0 b 7 10 0 12 4 17 b 6 19 8 19 10 17 b 14 12 7 10 7 0"; onda = "m 18 0 b 0 0 0 5 18 5 b 36 5 36 0 18 0"; spearkling = "m 30 23 b 24 23 24 33 30 33 b 36 33 37 23 30 23 m 35 27 l 60 28 l 35 29 m 26 27 l 0 28 l 26 29 m 29 23 l 30 0 l 31 23 m 29 33 l 30 56 l 31 33"
+Comment: 0,0:00:00.00,0:00:00.00,Flower&Circle,,0000,0000,0000,template notext noblank loop 30,!maxloop(math.ceil($dur/120))!!retime("presyl",set_temp("time",50*math.random(0,($dur+1000-delay)/40)),temp.time+delay)!{\fad(0,200)\an5\pos(!$center+math.random(-0.6*$width,0.6*$width)!,!$middle+math.random(-0.6*$height,0.6*$height)!)\frz45\shad0\bord0\p1}{!AutoTags(math.random(100,300),'fscx50\\fscy50\\alphaalp[math.random(2)]','fscx25\\fscy25\\alpha&0&')!}!spearkling!
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0000,0000,0000,,

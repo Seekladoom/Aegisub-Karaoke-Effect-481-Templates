@@ -1,0 +1,22 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Typing,typing text,0000,0000,0000,code line,count={0,0} function inc(index) count[index]=count[index]+1 return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Typing,typing text,0000,0000,0000,template char notext,!retime("preline",count[1]*100,count[1]*100+100)!!inc(1)!{\an4\pos($left,$middle)}_
+Comment: 0,0:00:00.00,0:00:00.00,Typing,typing text,0000,0000,0000,template char,!retime("line",count[2]*100+100,0)!!inc(2)!{\an4\pos($left,$middle)}
+Comment: 0,0:00:00.00,0:00:00.00,Typing,typing text,0000,0000,0000,template notext,!maxloop(math.floor(($ldur-count[1]*100-800)/500))!!retime("preline",(2*j-2)*500+count[1]*100,(2*j-1)*500+count[1]*100)!{\an4\pos($right,$middle)}_
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0000,0000,0000,,

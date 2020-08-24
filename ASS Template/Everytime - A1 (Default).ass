@@ -1,0 +1,26 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter(ref) ci[ref] = ci[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci = { 0}; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter2(ref) ci2[ref] = ci2[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci2 = { 1 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template char,{\an5}!char_counter2(1)!!retime("start2syl",-900+(ci2[1]-1)*35,0)!{\frz100\bord1\blur3\be5\1a&HFF&\3a&HFF&\move(!$center+40!,!$middle+15!,$scenter,$smiddle,0,500)\t(0,500,\fscx100\fscy100\frz0\alpha&H00)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank,!retime("syl",0,1000)!{\an5\c&HFFFFFF&\bord2\blur4\shad0\fscx100\fscy100\t(0,200,\fscx135\fscy135)\t(200,400,\fscx100\fscy100)\t(0,3000,\alpha&HFF&)\fad(0,100)\t(0,100,\3c&HFFFFFF&\t(100,$dur,\3c!line.styleref.color3!\move($scenter,$smiddle,$scenter,!$smiddle-30!,400,3000)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,Hangul-karaoke,0000,0000,0000,code syl,goc = {"0","180"}
+Comment: 1,0:00:00.00,0:00:00.00,Default,Hangul-karaoke,0000,0000,0000,template syl noblank notext,!retime("postsyl",-$dur-250,$syln+000)!{\fad(100,300)\an5\move($scenter,!$smiddle-math.random(30,40)!,$scenter,!$smiddle+50!,0,1000)\shad0\bord2\blur4\3c&HDBDBDB&\fry!goc[math.random(2)]!\frx!math.random(-5,5)!\frz!math.random(-180,180)!\t(0,800,\frx0\frz!math.random(-5,5)!)\t($dur,\alpha&HFF&)\fscx107\fscy107\p1}m 6 6 b 6 6 7 9 8 9 b 8 9 8 9 10 10 b 10 9 10 9 10 9 b 10 9 10 10 10 10 b 10 10 10 9 10 9 b 10 9 11 9 11 10 b 11 9 11 10 11 9 b 11 9 11 9 11 9 b 11 9 12 10 12 10 b 12 10 14 10 13 12 b 13 12 13 12 12 12 b 13 12 14 12 14 12 b 15 13 15 13 15 13 b 15 13 15 13 15 14 b 18 16 21 17 23 19 b 23 19 23 19 23 19 b 23 19 24 19 25 19 b 25 19 26 19 26 19 b 26 20 25 21 25 21 b 26 21 26 20 28 19 b 31 19 31 19 33 19 b 33 20 33 21 31 23 b 33 21 34 19 34 19 b 36 19 40 19 41 21 b 40 23 38 23 37 24 b 36 26 35 26 34 26 b 33 27 32 26 32 26 b 32 26 32 27 32 27 b 32 28 31 28 30 28 b 28 27 27 27 26 26 b 27 27 28 28 30 28 b 26 28 25 28 23 27 b 22 26 22 26 21 23 b 21 26 22 26 23 27 b 21 26 18 26 17 24 b 17 23 16 23 15 21 b 15 23 16 23 16 23 b 15 23 14 21 13 19 b 12 19 12 19 12 17 b 11 16 11 16 11 16 b 11 16 11 16 11 16 b 11 16 11 16 10 16 b 10 16 10 14 10 14 b 10 14 10 16 8 16 b 8 16 8 16 8 16 b 7 16 7 14 8 14 b 7 14 7 13 7 13 b 7 13 6 13 6 12 b 6 12 7 10 7 10 b 7 9 6 9 6 8 b 3 3 3 3 5 3 m 11 13 b 11 12 10 13 11 13 b 11 13 11 14 11 14 b 13 14 14 16 15 19 b 15 19 15 17 14 16 b 15 17 17 19 18 20 b 20 20 22 23 23 21 b 24 23 26 23 28 23 b 31 23 33 23 35 23 b 35 23 38 21 41 21 b 38 21 36 23 35 23 b 33 23 30 23 28 23 b 26 23 25 21 23 21 b 21 19 18 19 17 19 b 17 17 16 17 15 16 b 15 16 15 16 15 16 b 15 16 15 16 15 16 b 14 16 14 14 13 14 b 12 14 12 13 12 13 b 11 13 11 13 11 13
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template char notext,!char_counter(1)!!retime("start2syl",-900+(ci[1]-1)*20,500+(ci[1]-1)*25)!{\fad(0,100)\c&HFFFFFF&\blur10\bord0.1\fscx32\fscy32\an5\move($scenter,!$smiddle-25!,!$scenter+math.random(-50,50)!,!$smiddle+math.random(-25,70)!)\fad(230,0)\t(0,!line.duration!,\fscy30\fscx30\fad(0,500)\p1)}m 6 6 b 6 6 7 9 8 9 b 8 9 8 9 10 10 b 10 9 10 9 10 9 b 10 9 10 10 10 10 b 10 10 10 9 10 9 b 10 9 11 9 11 10 b 11 9 11 10 11 9 b 11 9 11 9 11 9 b 11 9 12 10 12 10 b 12 10 14 10 13 12 b 13 12 13 12 12 12 b 13 12 14 12 14 12 b 15 13 15 13 15 13 b 15 13 15 13 15 14 b 18 16 21 17 23 19 b 23 19 23 19 23 19 b 23 19 24 19 25 19 b 25 19 26 19 26 19 b 26 20 25 21 25 21 b 26 21 26 20 28 19 b 31 19 31 19 33 19 b 33 20 33 21 31 23 b 33 21 34 19 34 19 b 36 19 40 19 41 21 b 40 23 38 23 37 24 b 36 26 35 26 34 26 b 33 27 32 26 32 26 b 32 26 32 27 32 27 b 32 28 31 28 30 28 b 28 27 27 27 26 26 b 27 27 28 28 30 28 b 26 28 25 28 23 27 b 22 26 22 26 21 23 b 21 26 22 26 23 27 b 21 26 18 26 17 24 b 17 23 16 23 15 21 b 15 23 16 23 16 23 b 15 23 14 21 13 19 b 12 19 12 19 12 17 b 11 16 11 16 11 16 b 11 16 11 16 11 16 b 11 16 11 16 10 16 b 10 16 10 14 10 14 b 10 14 10 16 8 16 b 8 16 8 16 8 16 b 7 16 7 14 8 14 b 7 14 7 13 7 13 b 7 13 6 13 6 12 b 6 12 7 10 7 10 b 7 9 6 9 6 8 b 3 3 3 3 5 3 m 11 13 b 11 12 10 13 11 13 b 11 13 11 14 11 14 b 13 14 14 16 15 19 b 15 19 15 17 14 16 b 15 17 17 19 18 20 b 20 20 22 23 23 21 b 24 23 26 23 28 23 b 31 23 33 23 35 23 b 35 23 38 21 41 21 b 38 21 36 23 35 23 b 33 23 30 23 28 23 b 26 23 25 21 23 21 b 21 19 18 19 17 19 b 17 17 16 17 15 16 b 15 16 1

@@ -1,0 +1,39 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,,From Effect "Angel" of DiaNgucMau
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter(ref) ci[ref] = ci[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci = { 0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter2(ref) ci2[ref] = ci2[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci2 = { 0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,temp = {}
+Comment: 1,0:00:00.00,0:00:00.00,Default,cánh phải,0000,0000,0000,template noblank notext,!retime("syl",-25,500)!{\an1\frz10\fad(0,200)\move($sright,$smiddle,!$sright-50!,!$smiddle-50!)\shad1\bord0\blur1\3c&H000000&\4c&H000000&\c&HFFFFFF&\fscx37\fscy40)\t(0,200,\fry-80)\t(200,300,\fry0)\t(300,400,\fry-80)\t(400,500,\fry0)\t(500,600,\fry-80)\t(600,700,\fry0)\t(700,800,\fry-80)\t(800,900,\fry0)\t(900,1000,\fry-80)\t(1000,1100,\fry0)\t(1100,1300,\fry-80)\t(1300,1450,\fry0)\t(1450,1600,\fry-80)\t(1600,1700,\fry0)\t(1700,1850,\fry-80)\t(1850,2000,\fry0)\t(2000,2200,\fry-80)\t(2200,2300,\fry0)\t(2300,2400,\fry-80)\t(2400,2700,\fry0)\p1}m 17 33 b 12 41 6 26 15 24 b 29 25 26 50 15 49 b 9 51 -4 41 2 22 b 11 3 28 -2 45 0 b 58 3 40 24 31 25 b 52 32 39 42 30 36 b 36 47 31 47 25 40 l 25 40 b 26 32 24 22 14 23 b 3 26 11 43 18 35 b 18 33 17 33 17 33 "
+Comment: 1,0:00:00.00,0:00:00.00,Default,cánh trái,0000,0000,0000,template noblank notext,!retime("syl",-25,500)!{\an1\frz-10\fry180\fad(0,200)\move($sleft,$smiddle,!$sleft-50!,!$smiddle-50!)\shad1\bord0\blur1\3c&H000000&\4c&H000000&\c&HFFFFFF&\fscx37\fscy40)\t(0,200,\fry250)\t(200,300,\fry180)\t(300,400,\fry250)\t(400,500,\fry180)\t(500,600,\fry250)\t(600,700,\fry180)\t(700,800,\fry250)\t(800,900,\fry180)\t(900,1000,\fry250)\t(1000,1100,\fry180)\t(1100,1300,\fry250)\t(1300,1450,\fry180)\t(1450,1600,\fry250)\t(1600,1700,\fry180)\t(1700,1850,\fry250)\t(1850,2000,\fry180)\t(2000,2200,\fry250)\t(2200,2300,\fry180)\t(2300,2400,\fry250)\t(2400,2700,\fry180)\p1}m 17 33 b 12 41 6 26 15 24 b 29 25 26 50 15 49 b 9 51 -4 41 2 22 b 11 3 28 -2 45 0 b 58 3 40 24 31 25 b 52 32 39 42 30 36 b 36 47 31 47 25 40 l 25 40 b 26 32 24 22 14 23 b 3 26 11 43 18 35 b 18 33 17 33 17 33 "
+Comment: 1,0:00:00.00,0:00:00.00,Default,vòng thiên sứ,0000,0000,0000,template noblank,!retime("syl",-25,500)!{\frz5\fscx65\fscy30\an5\blur2\fad(0,300)\move($scenter,!$smiddle-30!,!$scenter-52!,!$smiddle-80!)\bord1\3c&H00FCFF&\c&HC7FEFF&\p1}m 0 25 b 1 10 50 11 50 25 b 51 40 -1 40 0 25 m 2 23 b -5 38 49 39 49 25 b 50 14 6 11 2 23 "
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank,!retime("syl",-25,500)!{\an5\blur2\fad(0,300)\move($scenter,$smiddle,!$scenter-50!,!$smiddle-50!)\t(0,25,\bord6\blur3)\t(25,$dur,\frz5\3c&HFFFFFF&\fscx100\fscy100\bord6\blur3)}
+Comment: 1,0:00:00.00,0:00:00.00,Default,lead-in(text),0000,0000,0000,template char,!char_counter2(1)!!retime("start2syl",-400+(ci2[1]-1)*35,0)!{\an5\c&HFFFFFF&\3c&HFFFFFF&\blur1\move(!$scenter+10!,!$smiddle+10!,$scenter,$smiddle,100,400)\fad(230,0)\t(0,400,\fscx100\fscy100\blur0\c&H000000&)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,star ={"m 17 0 l 11 8 l 0 11 l 7 19 l 7 30 l 17 26 l 28 30 l 27 19 l 35 11 l 23 8 ",  "m 23 0 l 15 12 l 0 16 l 10 27 l 9 42 l 23 36 l 37 42 l 36 27 l 46 16 l 31 12", "m 11 0 l 7 6 l 0 7 l 5 12 l 4 19 l 11 17 l 17 19 l 17 12 l 22 7 l 15 5 "  ,"m 14 1 b 3 1 3 18 14 18 b 25 18 25 1 14 1 "  ,"m 14 1 b 3 1 3 18 14 18 b 25 18 25 1 14 1 "}
+Comment: 0,0:00:15.27,0:00:15.27,Default,Get Frame Dur,0000,0000,0000,code once,msa = _G.aegisub.ms_from_frame(1) msb = _G.aegisub.ms_from_frame(100) if msa == nil and msb == nil then frame_dur = 33 else frame_dur = (msb-msa)/100 end
+Comment: 0,0:00:15.27,0:00:15.27,Default,,0000,0000,0000,code once,math.randomseed(8317)
+Comment: 0,0:00:00.00,0:00:15.27,Default,,0000,0000,0000,code once,logic ={"100"  ,"230"  ,"310"  ,"50"}
+Comment: 0,0:00:15.27,0:00:15.27,Default,,0000,0000,0000,code once,temp = {}
+Comment: 0,0:00:15.27,0:00:15.27,Default,,0000,0000,0000,code once,function set_temp(ref,val) temp[ref] = val; return val; end
+Comment: 0,0:00:00.00,0:00:00.00,Default,AutoTags,0000,0000,0000,code syl,function AutoTags(Intervalo,Dato1,Dato2)            local RESULTADO=""     local SUERTE = 0     local CONTADOR = 0     local ARREGLO = 0                           local count = math.ceil(line.duration/Intervalo)                 			ARREGLO = {Dato1,Dato2}    			              for i = 1, count do               CONTADOR = i    	    	    		if Dato1 and Dato2 then     					if  CONTADOR%2 ==0 then    								SUERTE = ARREGLO[1]    					else    								SUERTE = ARREGLO[2]    					end	    		end     				    	RESULTADO = RESULTADO .."\\t(" ..(i-1)*Intervalo.. "," ..i*Intervalo.. ",\\" ..SUERTE..")"..""     			     end         		     return RESULTADO	  	    	               end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter2(ref) ci2[ref] = ci2[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci2 = { 0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 0,0:00:15.27,0:00:15.27,Default,Beizer Curve Move,0000,0000,0000,code once,function bezier_move(x1,y1,x2,y2,x3,y3,x4,y4,t1,t2,accel,afterimage_blur,afterimage_dur,density) if density == 0 or density == nil then density = 1 end if afterimage_blur == 0 or afterimage_blur == nil then x_blur = 0 y_blur = 0 else x_blur = math.random(-afterimage_blur,afterimage_blur)/3 y_blur = math.random(afterimage_blur) end if afterimage_dur == nil or afterimage_dur < frame_dur then afterimage_dur = frame_dur end  if accel == nil then accel = 1 end x_pos = {} y_pos = {} dur = t2 - t1 frames = math.floor(dur/(frame_dur/density)) x_pos[j] =  (1-(j/frames)^accel)^3 * x1 + 3*(1-(j/frames)^accel)^2 * ((j/frames)^accel) * x2 + 3*(1-(j/frames)^accel) * ((j/frames)^accel)^2 * x3 + ((j/frames)^accel)^3 * x4  y_pos[j] = (1-(j/frames)^accel)^3 * y1 + 3*(1-(j/frames)^accel)^2 * ((j/frames)^accel) * y2 + 3*(1-(j/frames)^accel) * ((j/frames)^accel)^2 * y3 + ((j/frames)^accel)^3 * y4  if j == 1 then maxloop(frames) end retime("presyl",t1+(j-1)*(frame_dur/density),t1+j*(frame_dur/density)+afterimage_dur) return string.format("\\move(%d,%d,%d,%d)",x_pos[j],y_pos[j],x_pos[j] + x_blur ,y_pos[j] + y_blur) end
+Comment: 0,0:00:15.27,0:00:15.27,Default,effect,0000,0000,0000,template notext noblank,!retime("start2syl",0,19500)!{\an5\fscx9\fscy12\bord0\shad0\c&HFFFFFF&\bord0\frz!math.random(-100,100)!\3c&HFFFFFF&\!bezier_move($center-20,$middle-30,$center-$width*10/200,$middle-$width*10/200,$center+$width*100/200,$middle-$width*0/200*1,$center+$width*1.3/2,$middle,-500,0,1,50,2000,5)!\!AutoTags(logic[math.random(4)],'1a&HFF&','alpha0')!\p1}!star[math.random(1)]!

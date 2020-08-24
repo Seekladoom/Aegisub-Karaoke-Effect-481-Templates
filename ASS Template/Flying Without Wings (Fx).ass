@@ -1,0 +1,32 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,Rolling Rectangle effect by ai-chan,Set actor = "rollrect" to apply effect
+Comment: 0,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,code once,rectbord = 8; rect = string.format("m %d %d l %d %d l %d %d l %d %d l %d %d m 0 0 l 100 0 l 100 100 l 0 100 l 0 0", -rectbord, -rectbord, -rectbord, 100+rectbord, 100+rectbord, 100+rectbord, 100+rectbord, -rectbord, -rectbord, -rectbord)
+Comment: 0,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,code line,fxgroup.rollrect = (line.actor == "rollrect"); curpos, curwidth, curdur = math.floor(line.left), 0, 250; lineheight = math.floor(line.height); linebottom = math.floor(line.bottom)
+Comment: 0,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,code syl noblank,lastpos, lastwidth, lastdur = curpos, curwidth, curdur; curpos, curwidth, curdur = math.floor(line.left+syl.right), math.floor(syl.width), 0
+Comment: 0,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,code syl,curdur = curdur + syl.duration; fxgroup.rollrectend = (fxgroup.rollrect and syl.i == orgline.kara.n and syl.i > 0)
+Comment: 0,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,template syl fxgroup rollrect noblank notext,!retime("presyl",-lastdur,0)!{\pos(!lastpos!,!linebottom!)\an7\frz180\fscx40\fscy47\bord0\1c&HFFFFFF&\3c&HFFFFFF&\t(0,!lastdur!,\1c&HFFFFFF&\3c&HFFFFFF&\frz90\fscx40\fscy51)\p1}!rect!{\p0}
+Comment: 0,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,template syl fxgroup rollrectend notext,!retime("syl",syl.duration-curdur,0)!{\pos(!curpos!,!linebottom!)\an7\frz180\fscx40\fscy47\1c&HFFFFFF&\3c&HFFFFFF&\bord0\t(0,!curdur!,\1c&HFFFFFF&\3c&HFFFFFF&\frz90\fscx40\fscy51\1a&HFF&)\p1}!rect!{\p0}
+Comment: 0,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,code once,temp = {}; function set_temp(ref,val) temp[ref] = val; return val; end; arrow_1 = "m 0 0 l 4 5 l 13 5 l 14 6 l 13 7 l 4 7 l 0 12 l 14 12 l 20 6 l 14 0 "; arrow_2 = "m 0 0 l 0 2 l 51 2 l 51 0"; arrow_3 = "m 0 0 l 3 7 l 0 14 l 12 7 "; heart = "m 16 8 b 12 0 0 4 0 13 b 0 23 12 23 16 33 b 20 23 32 23 32 13 b 32 4 20 0 16 8"; heart_s = "m 0 6 b 0 13 7 14 12 20 b 13 21 14 20 13 19 b 8 13 1 12 1 6 b 1 5 0 5 0 6 m 0 2 b 0 4 2 3 2 2 b 2 0 0 1 0 2 "
+Comment: 0,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,code syl all,function char_counter2(ref) ci2[ref] = ci2[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,code line all,ci2 = { 0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 1,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,template char,{\an5}!char_counter2(1)!!retime("start2syl",-900+(ci2[1]-1)*35,0)!{\frz100\blur0.6\1a&HFF&\3a&HFF&\move(!$center+40!,!$middle+15!,$scenter,$smiddle,0,500)\t(0,500,\fscx100\fscy100\frz0\alpha&H00)}
+Comment: 1,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,template noblank,!retime("syl",0,200)!{\an5\blur6\bord6\pos($scenter,$smiddle)\fad(0,100)\t(0,100,\1a&HFF&\fscx100\fscy100)\t(100,$dur,\3c!line.styleref.color3!\fscx100\fscy100\bord1.7\blur2)}
+Comment: 1,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,template multi,!retime("syl",0,800)!{\fscx37\fscy37\alpha0\an42\c&HFFFFFF&\bord0\blur0\move($center,$middle,!$scenter+math.random(-40,40)!,!$smiddle+math.random(20,100)!)\pos(!$scenter+math.random(-30,30)!,!$smiddle+math.random(-50,50)!)\(0,100,\alpha0\3c&HFFFFFF&)\t(100,200,\1a&HFF&)\t(200,300,\alpha0\3c&HFFFFFF&)\t(300,350,\1a&HFF&)\t(350,400,\alpha0\alpha0\3c&HFFFFFF&)\t(400,420,\1a&HFF&)\t(500,580,\alpha0\3c&HFFFFFF&)\t(580,720,\1a&HFF&)\t(750,800,\alpha0\3c&HFFFFFF&)\t(800,920,\1a&HFF&)\p1}m -50 0 b -17 -1 -6 -1 -8 -6 b -1 -6 -1 -17 0 -50 b 1 -17 1 -6 8 -6 b 6 -1 17 -1 50 0 b 17 1 6 1 8 6 b 1 6 1 17 0 50 b -1 17 -1 6 -8 6 b -7 0 -17 1 -50 0 "
+Comment: 1,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,template multi,!retime("syl",0,800)!{\fscx30\fscy30\alpha0\an34\c&HFFFFFF&\bord0\blur0\move($center,$middle,!$scenter+math.random(-40,40)!,!$smiddle+math.random(20,100)!)\pos(!$scenter-math.random(-30,30)!,!$smiddle-math.random(-50,50)!)\(0,50,\alpha0\3c&HFFFFFF&)\t(50,100,\1a&HFF&)\t(100,200,\alpha0\3c&HFFFFFF&)\t(200,250,\1a&HFF&)\t(250,350,\alpha0\alpha0\3c&HFFFFFF&)\t(350,400,\1a&HFF&)\t(400,500,\alpha0\3c&HFFFFFF&)\t(500,620,\1a&HFF&)\t(620,700,\alpha0\3c&HFFFFFF&)\t(700,900,\1a&HFF&)\p1}m -50 0 b -17 -1 -6 -1 -8 -6 b -1 -6 -1 -17 0 -50 b 1 -17 1 -6 8 -6 b 6 -1 17 -1 50 0 b 17 1 6 1 8 6 b 1 6 1 17 0 50 b -1 17 -1 6 -8 6 b -7 0 -17 1 -50 0 "
+Comment: 1,0:00:00.00,0:00:00.00,Default,rollrect,0000,0000,0000,template multi,!retime("syl",0,650)!{\fscx17\fscy17\alpha0\an32\c&HFFFFFF&\bord0\blur0\move($center,$middle,!$scenter+math.random(-40,40)!,!$smiddle+math.random(20,100)!)\pos(!$scenter+math.random(-30,30)!,!$smiddle+math.random(-50,50)!)\(0,200,\alpha0\3c&HFFFFFF&)\t(200,250,\1a&HFF&)\t(250,350,\alpha0\3c&HFFFFFF&)\t(350,400,\1a&HFF&)\t(400,420,\alpha0\alpha0\3c&HFFFFFF&)\t(420,480,\1a&HFF&)\t(480,500,\alpha0\3c&HFFFFFF&)\t(500,550,\1a&HFF&)\t(550,600,\alpha0\3c&HFFFFFF&)\t(600,650,\1a&HFF&)\p1}m -50 0 b -17 -1 -6 -1 -8 -6 b -1 -6 -1 -17 0 -50 b 1 -17 1 -6 8 -6 b 6 -1 17 -1 50 0 b 17 1 6 1 8 6 b 1 6 1 17 0 50 b -1 17 -1 6 -8 6 b -7 0 -17 1 -50 0 "
