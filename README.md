@@ -9,11 +9,13 @@ https://huyhuu.com/news/1282/Aegisub-Karaoke-Effect
 谷歌网盘：
 https://drive.google.com/file/d/0B8Nv23IKVgxXeEV5RW5EZENoams/view
 
+
 481例国内备份（谷歌搜出来的原始来源）
 
 https://subhd.tv/a/509306
 
 http://zimuku.la/detail/140437.html
+
 
 Aegisub动态特效模板500个（内附相关教程 V2）
 
