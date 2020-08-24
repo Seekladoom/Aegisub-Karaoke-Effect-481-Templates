@@ -1,0 +1,22 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: 4,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,4,,0000,0000,0000,code once,temp = {}; function set_temp(ref,val) temp[ref] = val; return val end; start = "m 24 24 l 30 12 l 24 0 l 18 12 l 24 24 l 12 18 l 0 24 l 12 30 l 24 24 l 18 36 l 24 48 l 30 36 l 24 24 l 36 30 l 48 24 l 36 18 "
+Comment: 1,0:00:00.00,0:00:00.00,4,,0000,0000,0000,template char notext noblank loop 1,!retime("syl",-10,2800)!{\an!math.random(2,5)!\move($center,$middle,!$center+math.random(-380,-300)!,!$middle+math.random(-50,50)!)\1c&H00F0FF&\1a&H00F0FF&\bord1\blur1\3c&HFFFFFF&\3a&HAD&\fscx!set_temp("size",math.random(10,25))!\fscy!temp.size!\frz!math.random(0,45)!\t(\fr!math.random(720,1080)*(-1)^math.random(1,2)!)\fad(300,800)\p1}!start!
+Comment: 0,0:00:00.00,0:00:00.00,4,,0000,0000,0000,template syl noblank,!retime("start2syl",60*(syl.i-$syln),0)!{\fad(300,0)\an5\pos($center,$middle)}
+Comment: 0,0:00:00.00,0:00:00.00,4,,0000,0000,0000,template syl noblank,!retime("syl",0,400)!{\an5\pos($center,$middle)\t(0,50,\fscx120\fscy120\3c&HFFFFFF&\bord2\blur2)\t(50,!$dur+400!,\fscx100\fscy100\3c!line.styleref.color3!)\fad(0,400)}

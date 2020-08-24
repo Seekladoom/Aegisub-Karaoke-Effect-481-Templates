@@ -1,0 +1,27 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl,function AutoTags(Intervalo,Dato1,Dato2)            local RESULTADO=""     local SUERTE = 0     local CONTADOR = 0     local ARREGLO = 0                           local count = math.ceil(line.duration/Intervalo)                 			ARREGLO = {Dato1,Dato2}    			              for i = 1, count do               CONTADOR = i    	    	    		if Dato1 and Dato2 then     					if  CONTADOR%2 ==0 then    								SUERTE = ARREGLO[1]    					else    								SUERTE = ARREGLO[2]    					end	    		end     				    	RESULTADO = RESULTADO .."\\t(" ..(i-1)*Intervalo.. "," ..i*Intervalo.. ",\\" ..SUERTE..")"..""     			     end         		     return RESULTADO	  	    	               end
+Comment: 2,0:00:00.00,0:00:00.00,Default,Lá xanh,0000,0000,0000,Template noblank,!retime("presyl",-700,0)!{\fad(300,0)\an5\frz!math.random(-10,10)!)\c&H26D548&\3c&H00FFFF&\bord1.5\blur1.5\shad0\move($scenter,!$smiddle-100!,$scenter,!$smiddle-10!,0,700)\fscx40\fscy40\t(0,700,\frz!randomFRZ!)\p1}m 20 0 b 21 8 23 13 20 12 l 20 12 b 23 14 24 20 21 19 l 21 19 b 25 22 25 27 22 26 b 22 26 22 26 22 26 b 27 29 28 33 24 34 b 29 36 31 39 28 39 b 31 42 35 40 35 44 b 30 44 26 44 27 38 b 26 41 21 42 19 36 b 17 42 14 35 12 36 b 14 38 2 33 0 32 b 2 34 12 40 8 40 b 10 41 14 42 11 44 b 16 44 23 45 19 49 b 23 47 30 47 27 49 b 32 47 33 48 35 50 b 34 53 31 52 27 54 b 26 56 22 55 17 57 b 22 59 13 59 12 61 b 21 60 4 65 2 67 b 4 66 22 62 16 65 b 19 66 28 61 23 67 b 26 68 32 58 33 63 b 36 61 36 53 40 53 b 38 57 38 59 36 62 b 40 62 36 66 38 71 b 39 66 42 61 45 64 b 46 59 44 56 44 53 b 47 58 59 67 65 70 b 67 71 69 71 71 71 b 72 69 73 68 69 67 b 57 65 52 59 47 53 b 51 53 56 55 53 56 b 57 56 63 57 62 59 b 64 59 66 57 75 59 b 71 57 68 57 67 56 b 65 56 63 55 64 53 b 62 53 57 53 59 51 b 63 50 67 47 74 49 b 71 47 79 44 83 44 b 80 43 84 41 86 41 b 87 40 88 39 91 37 b 89 38 87 39 85 38 b 83 39 81 41 79 39 b 78 41 72 44 70 41 b 66 44 60 47 60 43 b 59 46 53 47 51 45 b 48 42 52 40 60 38 b 54 38 54 35 60 32 b 57 32 57 28 61 26 b 59 26 62 21 65 17 b 62 21 57 25 56 24 b 55 27 51 30 50 28 b 50 29 50 38 44 33 b 47 36 46 41 44 43 b 40 40 39 36 43 31 b 40 32 35 27 37 23 b 35 26 30 20 32 17 b 30 19 27 14 27 10 b 26 12 23 8 20 0
+Comment: 1,0:00:00.00,0:00:00.00,Default,Lá bay,0000,0000,0000,template syl noblank fxgroup blankfx,!retime("syl2end",-130,-170)!{\an5\fad(0,100)\move($scenter,$smiddle,!$scenter+math.random(-50,50)!,!$smiddle+math.random(-50,50)!)\fscx120\fscy120\c&H26D548&\3c&H00FF00&\bord0.5\blur0.5\shad0}{\p1}m -23 13 b -31 12 -30 17 -30 22 b -26 28 -26 15 -23 13 m -28 19 b -28 17 -27 15 -26 14 "
+Comment: 3,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template syl noblank,!retime("start2syl",190*(syl.i-$syln),0)!{\an5\org($center,$bottom)\\move(!$center+15!,!$middle-15!,$center,$middle,800,1000)\\frz180\fscx60\fscy60\blur4\t(0,800,0.6,\frz720\fscx100\fscy100\3a&H00&)\t(800,1000,\)}
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank,!retime("syl",0,500)!{\an5\pos($center,$middle)\bord2\t(0,25,\fscx150\fscy150\3c&H26D548&\\t(25,$dur,\fscx100\fscy100\3c&H26D548&\&H000000&)\fad(0,500)}
+Comment: 0,0:01:01.22,0:01:03.23,Default,,0000,0000,0000,karaoke,{\k48}Đã {\k28}từ {\k41}rất {\k47}lâu {\k37}rồi
+Comment: 0,0:01:03.22,0:01:05.76,Default,,0000,0000,0000,karaoke,{\k29}Trong {\k20}anh {\k9}định {\k46}nghĩa {\k32}2 {\k43}tiếng {\k33}yêu {\k42}thương
+Comment: 0,0:01:05.74,0:01:09.49,Default,,0000,0000,0000,karaoke,{\k16}Anh {\k41}không {\k17}thể {\k17}trao {\k19}cho {\k38}ai {\k21}kể {\k18}từ {\k14}khi {\k24}anh {\k39}có {\k111}em
+Comment: 0,0:01:09.79,0:01:13.71,Default,,0000,0000,0000,karaoke,{\k42}Mùa {\k25}thu {\k32}đó {\k24}anh {\k33}có {\k236}em.
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0000,0000,0000,,

@@ -1,0 +1,21 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Romaji,,0000,0000,0000,template syl fxgroup long noblank,!retime("syl",0,0)!{\an5\blur4\pos($scenter,$smiddle)\alpha&H00&\1c!line.styleref.color1!\3c!line.styleref.color3!\fscx100\fscy100\t(0,!$sdur*0.3!,\1c!line.styleref.color3!\3c!line.styleref.color2!\fscx80\fscy80\blur6)\t(!$sdur*0.3!,$sdur,\1c!line.styleref.color1!\3c!line.styleref.color3!\blur4\fscx100\fscy100)}
+Comment: 0,0:00:00.00,0:00:00.00,Romaji,,0000,0000,0000,template syl fxgroup long noblank notext,!retime("syl",0,0)!{\an5\blur4\pos(!$scenter+80!,!$smiddle+55!)\alpha&H00&\1c!line.styleref.color1!\3c!line.styleref.color3!\fscx45\fscy45\bord0.5\frz!math.random(35,45)!\t(0,!$sdur*0.4!,\frz!math.random(80,85)!)\p1}!bambooblade!
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code once,bambooblade ="m 30 56 b 32 60 36 60 38 56 l 38 15 l 30 15 m 18 12 l 50 12 l 50 9 l 18 9 m 30 6 l 33 6 l 33 -57 l 30 -57 m 38 6 l 35 6 l 35 -57 l 38 -57 m 38 -60 l 30 -60 l 30 -77 l 38 -77 m 38 -80 l 38 -120 l 35 -120 l 35 -80 m 30 -80 l 33 -80 l 33 -120 l 30 -120 m 38 -123 l 30 -123 l 30 -140 b 32 -145 36 -145 38 -140"
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0000,0000,0000,,

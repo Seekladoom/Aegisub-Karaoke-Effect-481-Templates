@@ -1,0 +1,22 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code syl all,function char_counter2(ref) ci2[ref] = ci2[ref] + 1; return "" end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,code line all,ci2 = { 0 }; cn = _G.unicode.len(orgline.text_stripped:gsub(" ",""))
+Comment: 1,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template char,{\an5}!char_counter2(1)!!retime("start2syl",-900+(ci2[1]-1)*35,0)!{\frz100\bord3\blur1\1a&HFF&\3a&HFF&\move(!$center+40!,!$middle+15!,$scenter,$smiddle,0,500)\t(0,500,\fscx100\fscy100\frz0\alpha&H00)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank,!retime("syl",0,1000)!{\an5\c&HFFFFFF&\3c&H0C6E0D&\bord2\blur1\shad0\fscx100\fscy100\t(0,200,\fscx135\fscy135)\t(200,400,\fscx100\fscy100)\t(0,3000,\alpha&HFF&)\fad(0,100)\t(0,100,\3c&HFFFFFF&\t(100,$dur,\3c!line.styleref.color3!\t(100,200,\1a&HFF&)\t(200,300,\alpha0\3c&HFFFFFF&)\t(300,350,\1a&HFF&)\t(350,400,\alpha0\alpha0\3c&HFFFFFF&)\t(400,420,\1a&HFF&)\t(500,580,\alpha0\3c&HFFFFFF&)\t(580,720,\1a&HFF&)\t(750,800,\alpha0\3c&HFFFFFF&)\t(800,920,\1a&HFF&)\move($scenter,$smiddle,$scenter,!$smiddle-30!)}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0000,0000,0000,template noblank notext loop 7,!retime("syl",-1000+(j-1)*500,500)!{\an5\c&HFFFFFF&\fscx15\fscy15\bord0\shad0\move(!$scenter+math.random(0,35)!,!$smiddle+math.random(-100,-50)!,!$scenter+math.random(-35,0)!,!$middle+5!,0,1000)\t(900,1200,\fscx0\fscy0\bord10\3c&HFFFFFF&\blur11\t(0,2000,\alpha&HFF&)\t(100,200,\1a&HFF&)\t(200,300,\alpha0\3c&HFFFFFF&)\t(300,350,\1a&HFF&)\t(350,400,\alpha0\alpha0\3c&HFFFFFF&)\t(400,420,\1a&HFF&)\t(500,580,\alpha0\3c&HFFFFFF&)\t(580,720,\1a&HFF&)\t(750,800,\alpha0\3c&HFFFFFF&)\t(800,920,\1a&HFF&)\p1}m 0 0 l 0 100 l 100 100 l 100 0
