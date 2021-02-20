@@ -1,3 +1,7 @@
+【吸血鬼猎人蕾拉的Aegisub视频教程】
+https://space.bilibili.com/346816900/channel/detail?cid=81879
+
+
 【追本溯源】
 
 网上广为流传的500例的源头其实是这个（国内流传的还加了大概10-20个来自别的地方的模板，谷歌搜出来的是481份），在谷歌搜索Aegisub Effect即可找到，第一个搜索结果就是。
@@ -5,6 +9,7 @@
 Aegisub Karaoke Effect
 
 https://huyhuu.com/news/1282/Aegisub-Karaoke-Effect
+
 
 【下载地址】
 
