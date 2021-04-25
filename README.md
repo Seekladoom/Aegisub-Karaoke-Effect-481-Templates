@@ -1,4 +1,4 @@
-【吸血鬼猎人蕾拉的Aegisub视频教程】
+【Aegisub视频教程】
 
 https://space.bilibili.com/346816900/channel/detail?cid=81879
 
