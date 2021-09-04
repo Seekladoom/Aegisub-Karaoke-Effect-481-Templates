@@ -1,0 +1,11 @@
+制作otf竖排文本：
+Aegisub 3.3.2 64位，并用ShiftMediaProject的ass.dll替换根目录下的ass.dll
+
+
+播放otf竖排文本：
+Pot：madvr + xysubfilter
+MPC：xysubfilter
+
+
+压制otf竖排文本：
+VapourSynth + ShiftMediaProject的assrender.dll
